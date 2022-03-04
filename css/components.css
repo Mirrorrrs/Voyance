@@ -1,0 +1,159 @@
+@import "../fonts/DMSans/stylesheet.css";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #F8F9FA;
+  font-family: "DM Sans";
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+input, button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+li {
+  list-style-type: none;
+}
+
+.customButton {
+  width: 100%;
+  padding: 15px 0;
+  background: #3669C9;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1420px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+.contentContainer {
+  margin-left: 32px;
+}
+@media only screen and (max-width: 767px) {
+  .contentContainer {
+    margin-left: 0;
+  }
+}
+
+.specialistsSlider .cards .card {
+  width: calc(100% / 6 - 15px);
+  min-height: 258px;
+  padding: 15px 19px;
+  background: white;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin-left: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .specialistsSlider .cards .card {
+    width: calc(100% / 4 - 15px);
+  }
+}
+
+.blur {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(54, 105, 201, 0.15);
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.viewWrapper.blured {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.viewWrapper.blured .blur {
+  opacity: 1;
+  z-index: 200;
+}
+
+.cookieModal {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 632px;
+  background: white;
+  border-radius: 10px;
+  z-index: 300;
+  display: none;
+}
+
+.cookieModal.visible {
+  display: block;
+}
+
+.cookieModal .header {
+  border-bottom: 1px solid #EDEDED;
+}
+
+.cookieModal .header .headerWrapper {
+  padding: 25px 30px 20px 25px;
+}
+
+.cookieModal .header h5 {
+  font-weight: bold;
+  font-size: 15px;
+  color: #0C1A30;
+}
+
+.cookieModal .sections {
+  padding: 38px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: -30px;
+}
+
+.cookieModal .sections section {
+  width: calc(100% / 2 - 30px);
+  margin-left: 30px;
+}
+
+.cookieModal .sections section h6 {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.cookieModal .sections section p {
+  font-weight: normal;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85);
+  margin-top: 10px;
+}
+
+.cookieModal .sections section .customButton {
+  margin-top: 30px;
+}
+
+.cookieModal .sections section:nth-of-type(1) .customButton {
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
