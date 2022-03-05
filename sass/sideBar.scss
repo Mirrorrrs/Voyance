@@ -12,6 +12,11 @@ header, .sideBarHeader {
     height: 14px;
     @include adaptive("xsm") {
       display: block;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -21,6 +26,11 @@ header, .sideBarHeader {
     height: 20px;
     @include adaptive("xsm") {
       display: block;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 

@@ -17,6 +17,11 @@ header .burgerMenu, .sideBarHeader .burgerMenu {
   header .burgerMenu, .sideBarHeader .burgerMenu {
     display: block;
   }
+  header .burgerMenu img, .sideBarHeader .burgerMenu img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }
 header .searchButton, .sideBarHeader .searchButton {
   display: none;
@@ -26,6 +31,11 @@ header .searchButton, .sideBarHeader .searchButton {
 @media only screen and (max-width: 767px) {
   header .searchButton, .sideBarHeader .searchButton {
     display: block;
+  }
+  header .searchButton img, .sideBarHeader .searchButton img {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -281,7 +291,7 @@ header .searchBar .searchResults.empty .emptyWindow p:nth-of-type(2) {
     background: white;
     width: 100%;
     height: 100vh;
-    top: -100%;
+    top: -100vh;
     left: 0;
     z-index: 1000;
     -webkit-transition: 0.2s;
