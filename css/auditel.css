@@ -1,0 +1,29 @@
+.specialistsSlider {
+  margin-top: 0 !important;
+}
+@media only screen and (max-width: 413px) {
+  .specialistsSlider {
+    margin-top: 30px !important;
+    padding: 0 25px;
+  }
+}
+
+.profilesSlider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -15px;
+  margin-top: -30px;
+}
+
+.profilesSlider .specialistCard {
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .questions {
+    display: none;
+  }
+}

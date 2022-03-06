@@ -27,6 +27,46 @@ li {
   list-style-type: none;
 }
 
+.block {
+  margin-top: 30px;
+}
+
+.block .header {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block .header .controls {
+  display: flex;
+  align-items: center;
+}
+
+.block .header .controls span {
+  font-weight: 500;
+  font-size: 12px;
+  color: #3669C9;
+}
+
+.circledIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+}
+
+.contentWrapper {
+  display: flex;
+}
+
+.contentWrapper .contentContainer {
+  margin-top: 20px;
+  flex:1 1 auto;
+  overflow: hidden;
+  @include adaptive("xxsm"){
+    margin-top: 0;
+  }
+}
 
 .customButton {
   width: 100%;
@@ -38,11 +78,19 @@ li {
   font-size: 14px;
 }
 
+.customButton.white {
+  color: black;
+  background: white;
+  border:1px solid black;
+}
 
 .container {
   max-width: 1420px;
   padding:0 20px;
   margin: auto;
+  @include adaptive("xxsm"){
+    padding: 0;
+  }
 }
 
 .contentContainer {
@@ -52,7 +100,7 @@ li {
   }
 }
 
-.specialistsSlider .cards .card {
+.specialistCard {
   width: calc(100% / 6 - 15px);
   min-height: 258px;
   padding: 15px 19px;
@@ -63,12 +111,133 @@ li {
   @include adaptive("xsm"){
     width: calc(100% / 4 - 15px);
   }
+
+  @include adaptive("xxsm"){
+    width: calc(100% / 2 - 15px);
+  }
+}
+
+
+.specialistCard .buttons button {
+  margin-left: 10px;
+  background: #3669C9;
+}
+
+.specialistCard .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.specialistCard .header .discount {
+  padding: 2px 5px;
+  background: #FE3A30;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.specialistCard .header .specialization {
+  font-weight: 500;
+  font-size: 10px;
+  color: #3669C9;
+  background: #EFF5FB;
+  border-radius: 10px;
+  padding: 2px 5px;
+  text-transform: uppercase;
+  margin-left: 5px;
+}
+
+.specialistCard .header .like {
+  width: 16px;
+  height: 16px;
+}
+.specialistCard .header .like svg {
+  fill: white;
+  stroke: black;
+  transition: .2s;
+}
+
+.specialistCard .header .like svg:hover {
+  fill: #3669C9;
+  stroke: none;
+}
+
+.specialistCard .picture {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+}
+
+.specialistCard .picture .imageWrapper {
+  position: relative;
+  width: 74px;
+  height: 74px;
+}
+
+.specialistCard .picture .imageWrapper .profile {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.specialistCard .picture .imageWrapper .country {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.specialistCard  .name {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  color: #0C1A30;
+  margin-top: 20px;
+}
+
+.specialistCard .time {
+  font-weight: 500;
+  font-size: 10px;
+  text-align: center;
+  color: #3A9B7A;
+  margin-top: 5px;
+}
+
+.specialistCard .buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: -10px;
+}
+
+
+.specialistCard .rating {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.specialistCard .rating .calls {
+  margin-left: 10px;
+}
+
+.specialistCard .rating span {
+  font-weight: normal;
+  font-size: 10px;
+  color: #0C1A30
 }
 
 .blur {
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: rgba(54, 105, 201, 0.15);
@@ -77,8 +246,19 @@ li {
   transition: .2s;
 }
 
+.viewWrapper > .container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.viewWrapper > .container > .contentWrapper {
+  flex-grow: 1;
+}
+
+
 .viewWrapper.blured {
-  height: 100vh;
   overflow: hidden;
 }
 
@@ -87,6 +267,63 @@ li {
   z-index: 200;
 
 }
+
+.dropdownMenu .hiddenContent {
+  height: 0;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+  transition: .2s;
+}
+
+.dropdownMenu .hiddenContent .menuWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+  @include adaptive("xsm"){
+    align-items: flex-start;
+    margin-left: 12px;
+  }
+}
+
+.dropdownMenu .hiddenContent ul {
+  margin-top: -20px;
+}
+
+.dropdownMenu .hiddenContent ul li {
+  font-weight: normal;
+  font-size: 12px;
+  color: #0C1A30;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.dropdownMenu.active .hiddenContent {
+  height: auto;
+  margin-top: 15px;
+}
+
+.dropdownMenu.active {
+  background: white;
+}
+
+.dropdownMenu.active .icon svg {
+  fill: white!important;
+}
+
+.dropdownMenu.active .icon {
+  background: #3669C9;
+}
+
+.dropdownMenu.active .title {
+  color: #2D3748;
+}
+
+.dropdownMenu.active .content .arrow {
+  transform: rotate(90deg);
+}
+
 
 .cookieModal {
   position: fixed;
@@ -97,6 +334,14 @@ li {
   border-radius: 10px;
   z-index: 300;
   display: none;
+  @include adaptive("xsm"){
+    width: 90%;
+    top: 50%;
+    left:50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%,-50%);
+  }
 }
 
 .cookieModal.visible {
@@ -123,11 +368,37 @@ li {
   display: flex;
   justify-content: space-between;
   margin-left: -30px;
+  @include adaptive("xxsm"){
+    width: 100%;
+    margin-left: 0;
+    margin-top: -35px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .buttons {
+    display: none;
+    margin-top: 30px;
+    margin-left: -15px;
+    .customButton {
+      width: calc(100% / 2 - 15px);
+      border-radius: 10px;
+      text-align: center;
+      margin-left: 15px;
+    }
+    @include adaptive("xxsm"){
+      display: flex;
+    }
+  }
 }
 
 .cookieModal .sections section {
   width: calc(100% / 2 - 30px);
   margin-left: 30px;
+  @include adaptive("xxsm"){
+    margin-left: 0;
+    width: 100%;
+    margin-top: 35px;
+  }
 }
 
 .cookieModal .sections section h6{
@@ -145,6 +416,9 @@ li {
 
 .cookieModal .sections section .customButton {
   margin-top: 30px;
+  @include adaptive("xxsm"){
+    display: none;
+  }
 }
 
 .cookieModal .sections section:nth-of-type(1) .customButton {
@@ -153,3 +427,212 @@ li {
   border: 1px solid black;
 }
 
+
+.questions {
+  @include adaptive("xxsm"){
+    padding: 0 25px;
+  }
+}
+
+.questions .question .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.questions .question .content .info {
+  display: flex;
+  align-items: center;
+}
+
+.questionsWrapper {
+  padding: 5px 25px 25px 25px;
+  border-radius: 15px;
+  background: white;
+}
+
+.questions .question {
+  padding-bottom: 20px;
+  margin-top: 20px;
+  border-bottom: 1px solid #EDEDED;
+}
+
+.questions .question button {
+  padding: 9px;
+  background: #F3F5F6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:.2s
+}
+
+.questions .question button svg {
+  fill:#06070C;
+  transition:.2s
+}
+
+.questions .dropdownMenu.active button {
+  transform: rotate(45deg);
+  background: #000;
+}
+
+.questions .dropdownMenu.active svg {
+  fill: white !important;
+}
+
+
+.questions .question .hiddenContent .menuWrapper {
+  padding: 0 42px ;
+}
+
+.questions .question .content .text {
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 16px;
+}
+
+
+.questions .question .content .info .number {
+  font-weight: bold;
+  font-size: 24px;
+  color: rgba(60, 60, 67, 0.5);
+}
+
+.questions .customButton {
+  margin-top: 40px;
+}
+
+.filters {
+  display: none;
+  margin-top: 30px;
+  @include adaptive("xsm"){
+    display: block;
+  }
+
+  @include adaptive("xxsm"){
+    padding: 0 25px;
+  }
+}
+
+.filterModal {
+  display: none;
+  opacity: 0;
+  padding: 25px;
+  position: fixed;
+  max-width: 325px;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  border-radius: 10px;
+  @include adaptive("xsm"){
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include adaptive("xxsm"){
+    bottom: 35px;
+    top:auto;
+    transform: translate(-50%,0);
+  }
+  transition: .2s;
+}
+
+.filterModal.visible {
+  display: block;
+  opacity: 1;
+}
+
+.filterModal .block {
+  margin-top: 0;
+}
+
+.filterModal .block .controls {
+  transform: rotate(45deg);
+  width: 13px;
+  height: 13px;
+}
+
+.filterModal .filterTypeSelect {
+  margin-left: -20px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #EDEDED;
+  position: relative;
+}
+
+.filterModal .filterTypeSelect span {
+  font-weight: normal;
+  font-size: 14px;
+  color: #0C1A30;
+  margin-left: 20px;
+}
+
+.filterModal .filterTypeSelect .selectSlider {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 39px;
+  height: 2px;
+  background:#3669C9;
+  transition: .2s;
+}
+
+.filterModal .filterOptions {
+  margin-top: 30px;
+}
+
+.filterModal .filterOptions input {
+  display: none;
+}
+
+.filterModal .filterOptions > .option {
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #EDEDED;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filterModal .filterOptions > .option:last-child {
+  border-bottom: 0;
+}
+
+.filterModal .filterOptions > .option p {
+  font-weight: 500;
+  font-size: 14px;
+  color: #0C1A30;
+}
+
+.filterModal .filterOptions > .option .indicator {
+  width: 20px;
+  height: 20px;
+  background: #3A9B7A;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: .1s;
+
+}
+
+.filterModal .filterOptions input:checked + .option {
+  color: red !important;
+  .indicator {
+    opacity: 1;
+  }
+}
+
+.filterModal .buttons {
+  display: flex;
+  margin-left: -15px;
+  margin-top: 10px;
+}
+
+.filterModal .buttons button {
+  width: calc(100% / 2 - 15px);
+  margin-left: 15px;
+}

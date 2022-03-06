@@ -11,12 +11,13 @@ Array.from(dropdownItems).forEach(item=>{
 })
 searchInput.onfocus = ()=>{
     viewWrapper.classList.add("blured")
+    disableScroll()
 }
 
 searchInput.onblur = ()=>{
     viewWrapper.classList.remove("blured")
     searchResults.classList.remove("visible")
-
+    enableScroll()
 }
 
 searchInput.oninput = (ev)=>{

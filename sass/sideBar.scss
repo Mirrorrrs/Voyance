@@ -6,12 +6,11 @@ header, .sideBarHeader {
   display: flex;
   align-items: center;
 
-  .burgerMenu {
+  .burgerMenu, .searchButton, .backButton {
     display: none;
     width: 18px;
     height: 14px;
     @include adaptive("xsm") {
-      display: block;
       img {
         display: block;
         width: 100%;
@@ -20,16 +19,18 @@ header, .sideBarHeader {
     }
   }
 
-  .searchButton {
-    display: none;
-    width: 20px;
-    height: 20px;
+  .burgerMenu, .searchButton {
     @include adaptive("xsm") {
       display: block;
-      img {
-        display: block;
-        width: 100%;
-        height: 100%;
+    }
+  }
+
+  .backButton {
+    transform: rotate(180deg);
+    @include adaptive("xxsm"){
+      display: block;
+      ~ .burgerMenu {
+        display: none;
       }
     }
   }
@@ -38,10 +39,19 @@ header, .sideBarHeader {
     display: flex;
     justify-content: space-between;
   }
+
+  @include adaptive("xxsm"){
+    background: white;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 
 .sideBarHeader {
-  margin: 0 16px;
+  @include adaptive("xsm"){
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 
 header .logo {
@@ -49,6 +59,25 @@ header .logo {
   width: 100%;
   @include adaptive("xsm"){
     width: auto;
+  }
+}
+
+.textLogo {
+  display: none;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000;
+}
+
+.textLogo {
+  @include adaptive("xsm"){
+    display: block;
+  }
+}
+
+.textLogo ~ img {
+  @include adaptive("xsm") {
+    display: none;
   }
 }
 
@@ -75,6 +104,7 @@ header .navigationDisplay .page {
 
 header .searchBar {
   position: relative;
+  z-index: 301;
 }
 
 header .searchBar input {
@@ -83,8 +113,7 @@ header .searchBar input {
   font-weight: normal;
   font-size: 12px;
   border-radius: 15px;
-  position: relative;
-  z-index: 300;
+  background: white;
 }
 
 header .searchBar input::placeholder {
@@ -313,39 +342,12 @@ header .searchBar .searchResults.empty .emptyWindow p:nth-of-type(2){
     border-bottom: 1px solid #EDEDED;
     border-radius: 0;
     padding: 18px 0;
-    margin: 0 16px;
+    margin: 0 25px;
   }
 }
 
-.sideBar nav li .hiddenContent {
-  height: 0;
-  position: relative;
-  overflow: hidden;
-  margin-top: 0;
-  transition: .2s;
-}
-
-.sideBar nav li .hiddenContent .menuWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 0;
-  @include adaptive("xsm"){
-    align-items: flex-start;
-    margin-left: 12px;
-  }
-}
-
-.sideBar nav li .hiddenContent ul {
-  margin-top: -20px;
-}
-
-.sideBar nav li .hiddenContent ul li {
-  font-weight: normal;
-  font-size: 12px;
-  color: #0C1A30;
-  margin-top: 20px;
-  padding: 0;
+.sideBar .hiddenContent li {
+  border-bottom: 0;
 }
 
 .sideBar nav li .title {
@@ -359,31 +361,6 @@ header .searchBar .searchResults.empty .emptyWindow p:nth-of-type(2){
     color: #0C1A30;
     margin-left: 0;
   }
-}
-
-.sideBar nav li.dropdownMenu.active .hiddenContent {
-  height: auto;
-  margin-top: 15px;
-}
-
-.sideBar nav li.dropdownMenu.active {
-  background: white;
-}
-
-.sideBar nav li.dropdownMenu.active .icon svg {
-  fill: white!important;
-}
-
-.sideBar nav li.dropdownMenu.active .icon {
-  background: #3669C9;
-}
-
-.sideBar nav li.dropdownMenu.active .title {
-  color: #2D3748;
-}
-
-.sideBar nav li.dropdownMenu.active .content .arrow {
-  transform: rotate(90deg);
 }
 
 .sideBar nav li .content:hover > .icon svg {

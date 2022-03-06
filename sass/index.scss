@@ -1,48 +1,13 @@
 @import "mixins";
 
-.circledIcon {
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
-}
-
-.block {
-  margin-top: 30px;
-}
-
-.block .header {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.block .header .controls {
-  display: flex;
-  align-items: center;
-}
-
-.block .header .controls span {
-  font-weight: 500;
-  font-size: 12px;
-  color: #3669C9;
-}
-
-
-.contentWrapper {
-  display: flex;
-}
-
-.contentWrapper .contentContainer {
-  margin-top: 20px;
-  flex:1 1 auto;
-  overflow: hidden;
-}
-
 .contentContainer .ads {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  @include adaptive("xxsm"){
+    padding: 20px 25px 0 25px;
+    background: white;
+  }
 }
 
 .contentContainer .ads .ad {
@@ -58,23 +23,60 @@
   height: 100%;
   border-radius: 10px;
   color: white;
+  position: relative;
 }
+
+.contentContainer .ads .ad .content .text {
+  position: relative;
+  z-index: 2;
+}
+
+.contentContainer .ads .ad .content .action {
+  position: relative;
+  z-index: 2;
+}
+
 .contentContainer .ads .ad .content .text p {
   margin-top: 18px;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 12px;
+  @include adaptive("xxsm"){
+    margin-top: 7px;
+  }
 }
 
 .contentContainer .ads .ad .content .text h3 {
   font-weight: bold;
   font-size: 26px;
+  @include adaptive("xxsm"){
+    font-size: 20px;
+  }
 }
 
 .contentContainer .ads .ad .content .action a {
   font-weight: bold;
   font-size: 10px;
 }
+
+.contentContainer .ads .ad .content .image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contentContainer .ads .ad .content .image img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 85%;
+}
+
 
 .contentContainer .ads .ad:first-child {
   width: 55%;
@@ -85,21 +87,36 @@
 }
 
 .contentContainer .ads .ad:first-child .content {
-  background: url("../assets/imgs/FirstAd.png") center/cover no-repeat;
   padding: 33px 40px;
 }
 
 .contentContainer .ads .ad:first-child .content .text {
-  max-width: 76%;
+  max-width: 70%;
+  @include adaptive("xxsm"){
+    max-width: 50%;
+  }
 }
 
 .contentContainer .ads .ad:nth-child(2) .content {
-  background: url("../assets/imgs/SecondAd.png") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding:26px 20px;
 }
+
+.categories {
+  @include adaptive("xxsm"){
+    background: white;
+    margin-top: 0;
+    padding: 30px 25px 20px 25px;
+  }
+  .header {
+    @include adaptive("xxsm"){
+      margin-bottom: 15px;
+    }
+  }
+}
+
 
 .categories .cards {
   display: flex;
@@ -125,12 +142,21 @@
     width: calc(100% / 4 - 30px);
     margin-left: 30px;
   }
+
+  @include adaptive("xxsm"){
+    padding-top: 0;
+  }
 }
 
 .categories .cards .card:hover {
   -webkit-box-shadow: 0px 0px 32px 0px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: 0px 0px 32px 0px rgba(34, 60, 80, 0.2);
   box-shadow: 0px 0px 32px 0px rgba(34, 60, 80, 0.2);
+  @include adaptive("xxsm"){
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
+  }
 }
 
 .categories .cards .card .info {
@@ -164,124 +190,15 @@
   }
 }
 
+.specialistsSlider {
+  @include adaptive("xxsm"){
+    padding: 0 25px;
+  }
+}
+
 
 .specialistsSlider .cards {
   margin-left: -15px;
-}
-
-
-.specialistsSlider .cards .card .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0;
-}
-
-.specialistsSlider .cards .card .header .discount {
-  padding: 2px 5px;
-  background: #FE3A30;
-  border-radius: 10px;
-  color: white;
-  font-weight: 500;
-  font-size: 10px;
-}
-
-.specialistsSlider .cards .card .header .specialization {
-  font-weight: 500;
-  font-size: 10px;
-  color: #3669C9;
-  background: #EFF5FB;
-  border-radius: 10px;
-  padding: 2px 5px;
-  text-transform: uppercase;
-  margin-left: 5px;
-}
-
-.specialistsSlider .cards .card .header .like {
-  width: 16px;
-  height: 16px;
-}
-.specialistsSlider .cards .card .header .like svg {
-  fill: white;
-  stroke: black;
-  transition: .2s;
-}
-
-.specialistsSlider .cards .card .header .like svg:hover {
-  fill: #3669C9;
-  stroke: none;
-}
-
-.specialistsSlider .cards .card .picture {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-
-}
-
-.specialistsSlider .cards .card .picture .imageWrapper {
-  position: relative;
-  width: 74px;
-  height: 74px;
-}
-
-.specialistsSlider .cards .card .picture .imageWrapper .profile {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-
-.specialistsSlider .cards .card .picture .imageWrapper .country {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-.specialistsSlider .cards .card  .name {
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.2px;
-  color: #0C1A30;
-  margin-top: 20px;
-}
-
-.specialistsSlider .cards .card .time {
-  font-weight: 500;
-  font-size: 10px;
-  text-align: center;
-  color: #3A9B7A;
-  margin-top: 5px;
-}
-
-.specialistsSlider .cards .card .buttons {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  margin-left: -10px;
-}
-
-.specialistsSlider .cards .card .buttons button {
-  margin-left: 10px;
-}
-
-.specialistsSlider .cards .card .rating {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.specialistsSlider .cards .card .rating .calls {
-  margin-left: 10px;
-}
-
-.specialistsSlider .cards .card .rating span {
-  font-weight: normal;
-  font-size: 10px;
-  color: #0C1A30
 }
 
 .specialistsSlider .slick-list {
@@ -296,7 +213,11 @@
   top: 0;
   left: 0;
   transform: translate(0,0);
+  @include adaptive("xxsm"){
+    display: none;
+  }
 }
+
 
 .specialistsSlider .slick-prev {
   order: 2;
