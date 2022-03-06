@@ -19,6 +19,11 @@ header, .sideBarHeader {
     }
   }
 
+  .searchButton {
+    width: 20px;
+    height: 20px;
+  }
+
   .burgerMenu, .searchButton {
     @include adaptive("xsm") {
       display: block;
