@@ -1,0 +1,143 @@
+.tWrap {
+  width: 100%;
+  position: relative;
+}
+.tWrap .tableContainer {
+  overflow: hidden;
+  height: 440px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+@media only screen and (max-width: 769px) {
+  .tWrap .tableContainer {
+    overflow-x: scroll;
+  }
+}
+.tWrap .expandTableBtn {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.tWrap .expandTableBtn button {
+  color: #3669C9;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.hiddenHeader {
+  display: none;
+}
+@media only screen and (max-width: 769px) {
+  .hiddenHeader {
+    overflow-x: scroll;
+  }
+}
+
+.hiddenHeader #hiddenTable {
+  margin-top: 0;
+}
+
+.hiddenHeader.visible {
+  display: block;
+  position: sticky;
+  top: -5px;
+  left: 0;
+  padding: 0;
+  z-index: 200;
+  width: 100%;
+}
+
+.tableContainer {
+  padding: 0;
+}
+
+table {
+  margin-top: 25px;
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+  z-index: 10;
+}
+
+table thead {
+  position: relative;
+  z-index: 10;
+}
+
+table thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
+
+table tbody tr td:first-child, thead tr th:first-child {
+  position: sticky;
+  z-index: 2;
+  left: -2px;
+}
+
+table th, table td {
+  color: #0C1A30;
+  background: white;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+}
+
+table thead th .headCell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+table thead th .headCell .icon {
+  width: 5px;
+  height: 3px;
+  display: block;
+  margin: 3px 0;
+  background: url("../assets/icons/ArrowDown.svg") no-repeat center/cover;
+}
+
+table th, table td {
+  padding: 10px 0;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+table td {
+  padding: 15px 0;
+}
+
+table td .signs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: -2px;
+}
+
+table td .sign {
+  width: 5px;
+  height: 16px;
+  border-radius: 5px;
+  background: #F1F1FA;
+  margin-left: 2px;
+}
+
+@media only screen and (max-width: 769px) {
+  table th, main table td {
+    min-width: 60px;
+  }
+}
