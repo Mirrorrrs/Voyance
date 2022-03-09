@@ -1,0 +1,63 @@
+@import "mixins";
+
+.specialistsSlider {
+  margin-top: 30px!important;
+  @include adaptive("xxsm") {
+    margin-top: 30px !important;
+    padding: 0 25px;
+  }
+}
+
+.profilesSlider {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-top: -30px;
+}
+
+.profilesSlider .specialistCard {
+  margin-top: 30px;
+
+}
+
+.questions {
+  @include adaptive("xsm"){
+    display: none;
+  }
+}
+
+.infoIcons {
+  display: flex;
+  margin-left: -25px;
+  @include adaptive("xxsm"){
+    padding: 30px 25px;
+    background: white;
+  }
+}
+
+.infoIcons .infoIcon {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+}
+
+.infoIcons span {
+  margin-left: 10px;
+  font-weight: normal;
+  font-size: 12px;
+  color: #0C1A30;
+}
+
+.infoIcons .infoIcon .imageWrapper {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #3669C9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoIcons .infoIcon .imageWrapper.red {
+  border: 1px solid #FE3A30;
+}

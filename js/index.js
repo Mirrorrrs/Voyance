@@ -1,5 +1,5 @@
 
-const slidesToShow = window.innerWidth <= 768 ? window.innerWidth <= 413 ? 2 : 4 : 6
+const slidesToShow = window.innerWidth <= 1025 ? window.innerWidth <= 413 ? 2 : 4 : 6
 
 $(".profilesSlider").each((num,el)=>{
     let element = $(el)
@@ -7,6 +7,7 @@ $(".profilesSlider").each((num,el)=>{
         infinite: false,
         slidesToShow: slidesToShow,
         slidesToScroll: slidesToShow,
+        showButtons:false,
         appendArrows:$(element.parent()).children(".header").children(".controls")
     })
 })
@@ -18,4 +19,6 @@ if (slidesToShow <=4){
         slidesToScroll: 1,
     })
 }
+
+
 

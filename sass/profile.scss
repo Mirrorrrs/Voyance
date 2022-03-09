@@ -1,0 +1,525 @@
+@import "mixins";
+
+body {
+  @include adaptive("xxsm"){
+    background: white;
+  }
+}
+
+.contentContainer {
+  position: relative;
+  top: -60px;
+  @include adaptive("xsm"){
+    top:0
+  }
+}
+
+.container {
+  @include adaptive("xsm"){
+    padding: 0;
+  }
+}
+
+.profileHeader {
+  background: url("../assets/imgs/ProfileBackground.png") center/cover no-repeat;
+  width: 100%;
+  height: 210px;
+  border-radius: 10px;
+  padding: 23px;
+  position: relative;
+  @include adaptive("xsm"){
+    height: 140px;
+  }
+  .navigationContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    @include adaptive("xsm"){
+      display: none;
+    }
+    .navigationDisplay {
+      color: white;
+      .page {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .userInfo {
+    width: 100%;
+    padding: 16px 50px 16px 16px;
+    background: linear-gradient(112.83deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.8) 110.84%);
+    border-radius: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    @include adaptive("xsm"){
+      padding: 16px;
+    }
+    .name {
+      display: flex;
+      align-items: center;
+
+    }
+    .icon {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      .country {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+      .profileImage {
+        border-radius: 12px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .stats {
+      display: flex;
+      flex-grow: 1;
+      margin-left: 22px;
+      align-items: center;
+      justify-content: space-between;
+      @include adaptive("xsm"){
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .statsWrap {
+        display: flex;
+      }
+
+      .textName {
+        h5 {
+          font-weight: bold;
+          font-size: 18px;
+          color: #2D3748;
+        }
+        p {
+          font-weight: 500;
+          font-size: 14px;
+          color: #3A9B7A;
+        }
+      }
+
+      .nameButtons {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+        @include adaptive("xsm"){
+          width: 100%;
+        }
+      }
+      .text {
+        display: flex;
+        @include adaptive("xsm"){
+          margin-top: 15px;
+          width: 100%;
+          justify-content: space-between;
+        }
+        .stat {
+          margin-left: 30px;
+          &:first-child {
+            @include adaptive("xsm"){
+              margin-left: 0;            }
+          }
+        }
+
+        .stat span {
+          font-weight: bold;
+          font-size: 12px;
+          letter-spacing: 0.2px;
+          color: #2D3748
+        }
+      }
+
+    }
+
+    .stats .buttons {
+      display: flex;
+    }
+
+    .stats .buttons button {
+      padding: 14px;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.06);
+      display: flex;
+      align-items: center;
+      span {
+        font-weight: bold;
+        font-size: 10px;
+        color: #2D3748;
+        margin-left: 10px;
+        text-transform: uppercase;
+      }
+    }
+
+    .stats .buttons button:nth-child(2){
+      padding: 14px 22px;
+      margin-left: 15px;
+    }
+  }
+
+  .info {
+    width: 100%;
+    position: absolute;
+    top: 55%;
+    left: 0;
+    padding: 0 23px;
+    @include adaptive("xsm"){
+      top: 30%;
+    }
+    .sales {
+      margin-left: -10px;
+      span {
+        padding: 2px 10px;
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 12px;
+        color: #FFFFFF;
+        background: #FE3A30;
+        margin-left: 10px;
+      }
+      span.white {
+        color: black;
+        background: white;
+      }
+    }
+  }
+}
+
+.descriptions {
+  display: flex;
+  margin-left: -20px;
+  margin-top: 50px;
+  @include adaptive("xsm"){
+    flex-direction: column;
+    padding:0 40px;
+  }
+
+  .descWrapper {
+    display: flex;
+    align-self: start;
+    @include adaptive("xsm"){
+      flex-direction: column;
+      width: 100%;
+    }
+    @include adaptive("xxsm"){
+      order: -2;
+    }
+    .description:nth-child(1){
+      width: 260px;
+      flex-shrink: 0;
+      @include adaptive("xsm"){
+        width: 100%;
+      }
+      .category {
+        padding: 7px 20px;
+        background: #F8F8F8;
+        border-radius: 5px;
+        margin-left: 15px;
+        margin-top: 15px;
+
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-top: -15px;
+        span {
+          font-weight: 500;
+          font-size: 12px;
+          color: #0C1A30;
+        }
+      }
+    }
+    .description:nth-child(2){
+      width: 300px;
+      flex-shrink: 0;
+      @include adaptive("xsm"){
+        width: 100%;
+      }
+
+      @include adaptive("xxsm"){
+        order: -2;
+      }
+      .content {
+        .card {
+          display: flex;
+          .text {
+            margin-left: 20px;
+            h6 {
+              font-weight: 500;
+              font-size: 14px;
+            }
+            p {
+              font-weight: 500;
+              font-size: 24px;
+              color: #0C1A30;
+              margin-top: 6px;
+            }
+            span {
+              font-weight: normal;
+              font-size: 12px;
+              line-height: 14px;
+              color: #A0AEC0;
+              margin-top: 5px;
+            }
+          }
+        }
+
+        .card {
+          margin-top: 25px;
+          .circledIcon {
+            background: #EFF5FB;
+          }
+          .text {
+            h6 {
+              color:#3669C9
+            }
+          }
+        }
+
+        .card:first-child  {
+          margin-top: 0;
+          .circledIcon {
+            background: #E4F3EA;
+          }
+          .text {
+            h6 {
+              color: #3A9B7A;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+
+  .description:nth-child(1){
+    flex-grow: 1;
+    span {
+      font-weight: normal;
+      font-size: 14px;
+      color: #838589;
+    }
+    p {
+      font-weight: normal;
+      font-size: 14px;
+      color: #0C1A30;
+      margin-top: 15px;
+    }
+    @include adaptive("xsm"){
+      width: 100%;
+    }
+  }
+
+  .description {
+    margin-left: 20px;
+    padding: 28px 20px;
+    border-radius: 15px;
+    background: white;
+    @include adaptive("xxsm"){
+      padding: 0;
+      padding-bottom: 30px;
+      border-radius: 0;
+      margin-top: 30px;
+      border-bottom: 1px solid #EDEDED;
+    }
+  }
+
+}
+
+.table {
+  background: white;
+  padding: 28px 20px;
+  border-radius: 15px;
+  position: relative;
+  @include adaptive("xxsm"){
+    border-bottom: 1px solid #EDEDED;
+  }
+  .controls .info {
+    display: flex;
+    @include adaptive("xxsm"){
+      margin-top: 10px;
+    }
+
+    .infoItem {
+      display: flex;
+      align-items: center;
+      margin-left: 18px;
+      span {
+        font-weight: 500;
+        font-size: 12px;
+        color: #0C1A30;
+        margin-left: 10px
+      }
+      .indicator {
+        width: 5px;
+        height: 14px;
+        border-radius: 5px;
+
+      }
+
+      &:first-child {
+        @include adaptive("xxsm"){
+          margin-left: 0;
+        }
+      }
+
+      &:nth-child(1) .indicator {
+        background: #7DC579;
+      }
+
+      &:nth-child(2) .indicator {
+        background: #6360FF;
+
+      }
+
+      &:nth-child(3) .indicator {
+        background: #9B81E5;
+
+      }
+
+      &:nth-child(4) .indicator {
+        background: #F1F1FA;
+
+      }
+
+    }
+  }
+  @include adaptive("xsm"){
+    border-radius: 0;
+  }
+  .header {
+    @include adaptive("xxsm"){
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+.comments.block {
+  background: white;
+  padding: 28px 20px;
+  border-radius: 15px;
+  @include adaptive("xxsm"){
+    padding: 0;
+  }
+  .buttons {
+    margin-top: 30px;
+    display: flex;
+    margin-left: -20px;
+    @include adaptive("xxsm"){
+      flex-direction: column;
+      margin-top: 20px  ;
+    }
+    button {
+      margin-left: 20px;
+      @include adaptive("xxsm"){
+        margin-top: 12px;
+      }
+    }
+  }
+
+  .commentsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    margin-top: -20px;
+    @include adaptive("xsm"){
+      flex-direction: column;
+      margin-left: 0;
+    }
+    .comment {
+      width: calc(100% / 2 - 20px);
+      height: 135px;
+      margin-left: 20px;
+      margin-top: 20px;
+      background: #F8F9FA;
+      border-radius: 12px;
+      padding: 22px;
+      display: flex;
+      @include adaptive("xsm"){
+        width: 100%;
+        margin-left: 0;
+      }
+      @include adaptive("xxsm"){
+        padding: 0;
+        width: 100%;
+        background: white;
+      }
+      .content {
+        margin-left: 16px;
+        .stars {
+          margin-top: 5px;
+          margin-bottom: 12px;
+          display: flex;
+          margin-left: -7px;
+          .star {
+            margin-left: 7px;
+          }
+        }
+        .header {
+          display: flex;
+          margin-bottom: 0;
+          justify-content: space-between;
+          h6 {
+            font-weight: 500;
+            font-size: 14px;
+            color: #0C1A30;
+          }
+          span {
+            font-weight: normal;
+            font-size: 12px;
+            color: #A0AEC0;
+          }
+        }
+        p {
+          font-weight: normal;
+          font-size: 12px;
+          color: #718096;
+        }
+      }
+
+      .icon {
+        flex-shrink: 0;
+        border: 1px solid #C4C4C4;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+header, .profileHeaderWrapper, .descriptions, .commentsWrap, .specialistsSlider, footer {
+  @include adaptive("xsm"){
+    padding-left:32px!important;
+    padding-right:32px!important;
+  }
+  @include adaptive("xxsm"){
+    padding-left:25px!important;
+    padding-right:25px!important;
+  }
+}
+
+.profileHeaderWrapper {
+  @include adaptive("xxsm"){
+    display: none;
+  }
+}
+
+

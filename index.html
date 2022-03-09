@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="css/sideBar.css">
     <link rel="stylesheet" href="css/footer.css">
     <script src="js/libs/jquery.js" defer></script>
+    <script src="js/utils.js" defer></script>
     <script src="js/libs/slick.min.js" defer></script>
-    <script src="js/libs/vue.js" defer></script>
     <script src="js/index.js" defer></script>
     <script src="js/sideBar.js" defer></script>
 </head>
@@ -54,123 +54,126 @@
                     <p class="link">Voyance / Accueil</p>
                     <p class="page">Accueil</p>
                 </div>
-                <div class="searchBar">
-                    <img src="assets/icons/Search.svg" alt="">
-                    <input type="text" placeholder="Pseudo">
-                    <div class="searchResults">
-                        <div class="result">
-                            <div class="content">
-                                <div class="icon">
-                                    <img src="assets/imgs/John.png" alt="">
+                <div class="searchAndFilters">
+                    <div class="searchBar">
+                        <img src="assets/icons/Search.svg" alt="">
+                        <input type="text" placeholder="Pseudo">
+                        <div class="searchResults">
+                            <div class="result">
+                                <div class="content">
+                                    <div class="icon">
+                                        <img src="assets/imgs/John.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            Andrea
+                                        </p>
+                                        <span>En consultation: 00:05:10</span>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <p>
-                                        Andrea
-                                    </p>
-                                    <span>En consultation: 00:05:10</span>
-                                </div>
-                            </div>
 
-                            <div class="raiting">
-                                <span>4.6</span>
-                            </div>
-                        </div>
-                        <div class="result">
-                            <div class="content">
-                                <div class="icon">
-                                    <img src="assets/imgs/John.png" alt="">
-                                </div>
-                                <div class="text">
-                                    <p>
-                                        Andrea
-                                    </p>
-                                    <span>En consultation: 00:05:10</span>
+                                <div class="raiting">
+                                    <span>4.6</span>
                                 </div>
                             </div>
+                            <div class="result">
+                                <div class="content">
+                                    <div class="icon">
+                                        <img src="assets/imgs/John.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            Andrea
+                                        </p>
+                                        <span>En consultation: 00:05:10</span>
+                                    </div>
+                                </div>
 
-                            <div class="raiting">
-                                <span>4.6</span>
-                            </div>
-                        </div>
-                        <div class="result">
-                            <div class="content">
-                                <div class="icon">
-                                    <img src="assets/imgs/John.png" alt="">
-                                </div>
-                                <div class="text">
-                                    <p>
-                                        Andrea
-                                    </p>
-                                    <span>En consultation: 00:05:10</span>
+                                <div class="raiting">
+                                    <span>4.6</span>
                                 </div>
                             </div>
+                            <div class="result">
+                                <div class="content">
+                                    <div class="icon">
+                                        <img src="assets/imgs/John.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            Andrea
+                                        </p>
+                                        <span>En consultation: 00:05:10</span>
+                                    </div>
+                                </div>
 
-                            <div class="raiting">
-                                <span>4.6</span>
-                            </div>
-                        </div>
-                        <div class="result">
-                            <div class="content">
-                                <div class="icon">
-                                    <img src="assets/imgs/John.png" alt="">
-                                </div>
-                                <div class="text">
-                                    <p>
-                                        Andrea
-                                    </p>
-                                    <span>En consultation: 00:05:10</span>
+                                <div class="raiting">
+                                    <span>4.6</span>
                                 </div>
                             </div>
+                            <div class="result">
+                                <div class="content">
+                                    <div class="icon">
+                                        <img src="assets/imgs/John.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            Andrea
+                                        </p>
+                                        <span>En consultation: 00:05:10</span>
+                                    </div>
+                                </div>
 
-                            <div class="raiting">
-                                <span>4.6</span>
-                            </div>
-                        </div>
-                        <div class="result">
-                            <div class="content">
-                                <div class="icon">
-                                    <img src="assets/imgs/John.png" alt="">
-                                </div>
-                                <div class="text">
-                                    <p>
-                                        Andrea
-                                    </p>
-                                    <span>En consultation: 00:05:10</span>
+                                <div class="raiting">
+                                    <span>4.6</span>
                                 </div>
                             </div>
+                            <div class="result">
+                                <div class="content">
+                                    <div class="icon">
+                                        <img src="assets/imgs/John.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            Andrea
+                                        </p>
+                                        <span>En consultation: 00:05:10</span>
+                                    </div>
+                                </div>
 
-                            <div class="raiting">
-                                <span>4.6</span>
-                            </div>
-                        </div>
-                        <div class="result">
-                            <div class="content">
-                                <div class="icon">
-                                    <img src="assets/imgs/John.png" alt="">
-                                </div>
-                                <div class="text">
-                                    <p>
-                                        Andrea
-                                    </p>
-                                    <span>En consultation: 00:05:10</span>
+                                <div class="raiting">
+                                    <span>4.6</span>
                                 </div>
                             </div>
+                            <div class="result">
+                                <div class="content">
+                                    <div class="icon">
+                                        <img src="assets/imgs/John.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            Andrea
+                                        </p>
+                                        <span>En consultation: 00:05:10</span>
+                                    </div>
+                                </div>
 
-                            <div class="raiting">
-                                <span>4.6</span>
+                                <div class="raiting">
+                                    <span>4.6</span>
+                                </div>
                             </div>
-                        </div>
-                        <button class="showMore customButton">
-                            Voir tous les résultats
-                        </button>
-                        <div class="emptyWindow">
-                            <div class="icon">
-                                <img src="" alt="">
+                            <button class="showMore customButton">
+                                Voir tous les résultats
+                            </button>
+                            <div class="emptyWindow">
+                                <div class="icon">
+                                    <img src="" alt="">
+                                </div>
+                                <p>Aucun résultat trouvé</p>
+                                <p>S'il vous plaît essayer d'utiliser d'autres mots-clés pour trouver le voyant</p>
                             </div>
-                            <p>Aucun résultat trouvé</p>
-                            <p>S'il vous plaît essayer d'utiliser d'autres mots-clés pour trouver le voyant</p>
                         </div>
                     </div>
+
                 </div>
             </div>
 

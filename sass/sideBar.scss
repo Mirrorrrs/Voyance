@@ -5,7 +5,6 @@ header, .sideBarHeader {
   padding-bottom: 15px;
   display: flex;
   align-items: center;
-
   .burgerMenu, .searchButton, .backButton {
     display: none;
     width: 18px;
@@ -95,24 +94,52 @@ header .contentContainer {
   }
 }
 
-header .navigationDisplay .link {
+.navigationDisplay .link {
   font-weight: normal;
   font-size: 12px;
 }
 
 
-header .navigationDisplay .page {
+.navigationDisplay .page {
   font-weight: bold;
   font-size: 14px;
   margin-top: 5px;
 }
 
-header .searchBar {
+.searchAndFilters {
+  display: flex;
+  align-items: center;
+}
+
+
+.searchBar {
   position: relative;
   z-index: 301;
 }
 
-header .searchBar input {
+.searchAndFilters {
+  margin-left: -30px;
+}
+
+.searchAndFilters .headerSearchItem {
+  margin-left: 30px;
+}
+
+.searchAndFilters .selectWrapper::after {
+  content: "";
+  width: 12px;
+  height: 6px;
+  display: block;
+  font-size: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  position: absolute;
+  background: url("../assets/icons/SelectArrow.svg") center/contain no-repeat;
+}
+
+
+.searchBar input, header .searchAndFilters select {
   padding: 10px 12px 10px 35px;
   border: 1px solid #E2E8F0;
   font-weight: normal;
@@ -121,13 +148,21 @@ header .searchBar input {
   background: white;
 }
 
-header .searchBar input::placeholder {
+.searchAndFilters select {
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width: 202px;
+  color:  #A0AEC0;
+}
+
+
+.searchBar input::placeholder {
   font-weight: normal;
   font-size: 12px;
   color: #A0AEC0;
 }
 
-header .searchBar > img {
+.searchBar > img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -135,7 +170,7 @@ header .searchBar > img {
   z-index: 301;
 }
 
-header .searchBar .searchResults {
+.searchBar .searchResults {
   width: 335px;
   position: absolute;
   top: calc(100% + 12px);
@@ -147,16 +182,15 @@ header .searchBar .searchResults {
   opacity: 0;
   transition: .5s;
   padding:8px 25px 39px 25px;
-
 }
 
-header .searchBar .searchResults.visible {
+.searchBar .searchResults.visible {
   opacity: 1;
   visibility: visible;
 
 }
 
-header .searchBar .searchResults .result {
+.searchBar .searchResults .result {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -166,16 +200,16 @@ header .searchBar .searchResults .result {
 }
 
 
-header .searchBar .searchResults .result:last-child {
+.searchBar .searchResults .result:last-child {
   border-bottom: 0;
 }
 
-header .searchBar .searchResults .result .content {
+.searchBar .searchResults .result .content {
   display: flex;
   align-items: center;
 }
 
-header .searchBar .searchResults .result .content .text {
+.searchBar .searchResults .result .content .text {
   margin-left: 20px;
   height: 100%;
   display: flex;
@@ -183,14 +217,14 @@ header .searchBar .searchResults .result .content .text {
   justify-content: space-between;
 }
 
-header .searchBar .searchResults .result .content .text p {
+.searchBar .searchResults .result .content .text p {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   color: #0C1A30;
 }
 
-header .searchBar .searchResults .result .content .text span {
+.searchBar .searchResults .result .content .text span {
   font-weight: normal;
   font-size: 12px;
   color: #3A9B7A;
@@ -199,13 +233,13 @@ header .searchBar .searchResults .result .content .text span {
 
 
 
-header .searchBar .searchResults .result .icon {
+.searchBar .searchResults .result .icon {
   width: 45px;
   position: relative;
   height: 45px;
 }
 
-header .searchBar .searchResults .result .icon img {
+.searchBar .searchResults .result .icon img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -213,41 +247,41 @@ header .searchBar .searchResults .result .icon img {
   border-radius: 50%;
 }
 
-header .searchBar .searchResults.empty .result{
+.searchBar .searchResults.empty .result{
   display: none;
 }
 
-header .searchBar .searchResults.empty .showMore {
+.searchBar .searchResults.empty .showMore {
   display: none;
 }
 
-header .searchBar .searchResults.empty {
+.searchBar .searchResults.empty {
   padding: 35px 25px 55px 25px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-header .searchBar .searchResults .emptyWindow {
+.searchBar .searchResults .emptyWindow {
   display: none;
 }
 
-header .searchBar .searchResults.empty .emptyWindow {
+.searchBar .searchResults.empty .emptyWindow {
   display: block;
 }
 
-header .searchBar .searchResults.empty .emptyWindow p {
+.searchBar .searchResults.empty .emptyWindow p {
   text-align: center;
 }
 
-header .searchBar .searchResults.empty .emptyWindow p:nth-of-type(1){
+.searchBar .searchResults.empty .emptyWindow p:nth-of-type(1){
   font-weight: 500;
   font-size: 16px;
   text-transform: capitalize;
   color: #000000;
 }
 
-header .searchBar .searchResults.empty .emptyWindow p:nth-of-type(2){
+.searchBar .searchResults.empty .emptyWindow p:nth-of-type(2){
   font-weight: normal;
   font-size: 14px;
   color: #838589;

@@ -33,6 +33,7 @@ searchInput.oninput = (ev)=>{
 menuButton.each((num,el)=>{
     el.onclick = ()=>{
         sideBar.classList.toggle("visible")
+        scrollEnabled ? disableScroll() : enableScroll()
     }
 })
 

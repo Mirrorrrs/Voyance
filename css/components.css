@@ -16,10 +16,21 @@ a {
   text-decoration: none;
 }
 
-input, button {
+input, button, select, span {
   border: none;
   outline: none;
   background: transparent;
+  font-family: DM Sans;
+}
+
+button {
+  cursor: pointer;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
 }
 
 li {
@@ -62,6 +73,15 @@ li {
   width: 48px;
   height: 48px;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contentWrapper {
@@ -75,12 +95,22 @@ li {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  overflow: hidden;
+  min-height: 0;
+  min-width: 0;
 }
-@media only screen and (max-width: 413px) {
+@media only screen and (max-width: 415px) {
   .contentWrapper .contentContainer {
     margin-top: 0;
   }
+}
+
+.star svg {
+  stroke: #C4C5C4;
+}
+
+.star.active svg {
+  fill: #FFC120;
+  stroke: #FFC120;
 }
 
 .customButton {
@@ -104,7 +134,7 @@ li {
   padding: 0 20px;
   margin: auto;
 }
-@media only screen and (max-width: 413px) {
+@media only screen and (max-width: 415px) {
   .container {
     padding: 0;
   }
@@ -113,7 +143,7 @@ li {
 .contentContainer {
   margin-left: 32px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 769px) {
   .contentContainer {
     margin-left: 0;
   }
@@ -129,12 +159,12 @@ li {
   border-radius: 10px;
   margin-left: 15px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 769px) {
   .specialistCard {
     width: calc(100% / 4 - 15px);
   }
 }
-@media only screen and (max-width: 413px) {
+@media only screen and (max-width: 415px) {
   .specialistCard {
     width: calc(100% / 2 - 15px);
   }
@@ -335,7 +365,7 @@ li {
           align-items: center;
   margin-top: 0;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 769px) {
   .dropdownMenu .hiddenContent .menuWrapper {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -392,7 +422,7 @@ li {
   z-index: 300;
   display: none;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 769px) {
   .cookieModal {
     width: 90%;
     top: 50%;
@@ -432,7 +462,7 @@ li {
           justify-content: space-between;
   margin-left: -30px;
 }
-@media only screen and (max-width: 413px) {
+@media only screen and (max-width: 415px) {
   .cookieModal .sections {
     width: 100%;
     margin-left: 0;
@@ -457,7 +487,7 @@ li {
   text-align: center;
   margin-left: 15px;
 }
-@media only screen and (max-width: 413px) {
+@media only screen and (max-width: 415px) {
   .cookieModal .sections .buttons {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -469,7 +499,7 @@ li {
   width: calc(100% / 2 - 30px);
   margin-left: 30px;
 }
-@media only screen and (max-width: 413px) {
+@media only screen and (max-width: 415px) {
   .cookieModal .sections section {
     margin-left: 0;
     width: 100%;
@@ -493,7 +523,7 @@ li {
 .cookieModal .sections section .customButton {
   margin-top: 30px;
 }
-@media only screen and (max-width: 413px) {
+@media only screen and (max-width: 415px) {
   .cookieModal .sections section .customButton {
     display: none;
   }
@@ -505,7 +535,7 @@ li {
   border: 1px solid black;
 }
 
-@media only screen and (max-width: 413px) {
+@media only screen and (max-width: 415px) {
   .questions {
     padding: 0 25px;
   }
@@ -601,12 +631,12 @@ li {
   display: none;
   margin-top: 30px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 769px) {
   .filters {
     display: block;
   }
 }
-@media only screen and (max-width: 413px) {
+@media only screen and (max-width: 415px) {
   .filters {
     padding: 0 25px;
   }
@@ -625,7 +655,7 @@ li {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 769px) {
   .filterModal {
     top: 50%;
     left: 50%;
@@ -633,7 +663,7 @@ li {
             transform: translate(-50%, -50%);
   }
 }
-@media only screen and (max-width: 413px) {
+@media only screen and (max-width: 415px) {
   .filterModal {
     bottom: 35px;
     top: auto;
@@ -753,5 +783,66 @@ li {
 
 .filterModal .buttons button {
   width: calc(100% / 2 - 15px);
+  margin-left: 15px;
+}
+
+@media only screen and (max-width: 415px) {
+  .specialistsSlider {
+    padding: 0 25px;
+  }
+}
+
+.specialistsSlider .cards {
+  margin-left: -15px;
+}
+
+.specialistsSlider .slick-list {
+  overflow: hidden;
+}
+
+.specialistsSlider .slick-arrow {
+  display: block;
+  position: static;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  font-size: 0;
+  left: 0;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+@media only screen and (max-width: 415px) {
+  .specialistsSlider .slick-arrow {
+    display: none;
+  }
+}
+
+.specialistsSlider .slick-prev {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.specialistsSlider .slick-next {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.specialistsSlider .slick-prev:before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 12px;
+  background: url("../assets/icons/SliderPrev.svg") center/contain no-repeat;
+  margin-left: 15px;
+}
+
+.specialistsSlider .slick-next:before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 12px;
+  background: url("../assets/icons/SliderNext.svg") center/contain no-repeat;
   margin-left: 15px;
 }

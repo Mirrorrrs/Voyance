@@ -1,0 +1,134 @@
+@import "mixins";
+.tWrap {
+  width: 100%;
+  position: relative;
+  .tableContainer {
+    overflow: hidden;
+    height: 440px;
+    transition: .2s;
+    @include adaptive("xsm"){
+      overflow-x:scroll ;
+    }
+  }
+  .expandTableBtn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    button {
+      color:#3669C9;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+
+}
+
+
+.hiddenHeader {
+  display: none;
+  @include adaptive("xsm"){
+    overflow-x: scroll;
+  }
+}
+
+.hiddenHeader #hiddenTable {
+  margin-top: 0;
+}
+
+.hiddenHeader.visible {
+  display: block;
+  position: sticky;
+  top: -5px;
+  left: 0;
+  padding: 0;
+  z-index: 200;
+  width: 100%;
+}
+
+.tableContainer {
+  padding: 0;
+}
+
+table {
+  margin-top: 25px;
+  width: 100%;
+  border-collapse:collapse;
+  position: relative;
+  z-index: 10;
+}
+
+table thead {
+  position: relative;
+  z-index: 10;
+}
+
+table thead th:first-child {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
+
+table tbody tr td:first-child,thead tr th:first-child  {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 2;
+  left: -2px;
+}
+
+table th, table td  {
+  color: #0C1A30;
+  background: white;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+}
+
+table thead th .headCell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table thead th .headCell span {
+}
+
+table thead th .headCell .icon {
+  width: 5px;
+  height: 3px;
+  display: block;
+  margin: 3px 0;
+  background: url("../assets/icons/ArrowDown.svg") no-repeat center/cover;
+}
+
+table th, table td {
+  padding: 10px 0;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+table td {
+  padding: 15px 0;
+}
+
+
+
+table td .signs {
+  display: flex;
+  justify-content: center;
+  margin-left: -2px;
+}
+
+table td .sign {
+  width: 5px;
+  height: 16px;
+  border-radius: 5px;
+  background: #F1F1FA;
+  margin-left: 2px;
+}
+
+table th, main table td  {
+  @include adaptive("xsm"){
+    min-width: 60px;
+
+  }
+}

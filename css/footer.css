@@ -13,14 +13,14 @@ footer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 769px) {
   footer {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
   }
 }
-@media only screen and (max-width: 413px) {
+@media only screen and (max-width: 415px) {
   footer {
     padding: 28px 25px;
     -webkit-box-orient: vertical;
@@ -35,12 +35,12 @@ footer p {
   font-size: 14px;
   color: #A0AEC0;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 769px) {
   footer p {
     width: 45%;
   }
 }
-@media only screen and (max-width: 413px) {
+@media only screen and (max-width: 415px) {
   footer p {
     width: auto;
   }
@@ -49,7 +49,7 @@ footer p {
 footer .links {
   margin-left: -40px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 769px) {
   footer .links {
     width: 55%;
     display: -webkit-box;
@@ -61,7 +61,7 @@ footer .links {
     text-overflow: unset;
   }
 }
-@media only screen and (max-width: 413px) {
+@media only screen and (max-width: 415px) {
   footer .links {
     margin-top: 10px;
     width: auto;

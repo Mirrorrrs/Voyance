@@ -17,10 +17,20 @@ a {
   text-decoration: none;
 }
 
-input, button {
+input, button, select, span {
   border: none;
   outline: none;
   background: transparent;
+  font-family: DM Sans;
+}
+
+button {
+  cursor: pointer;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 li {
@@ -53,6 +63,9 @@ li {
   width: 48px;
   height: 48px;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contentWrapper {
@@ -62,10 +75,20 @@ li {
 .contentWrapper .contentContainer {
   margin-top: 20px;
   flex:1 1 auto;
-  overflow: hidden;
+  min-height: 0;
+  min-width: 0;
   @include adaptive("xxsm"){
     margin-top: 0;
   }
+}
+
+.star svg {
+  stroke: #C4C5C4;
+}
+
+.star.active svg {
+  fill: #FFC120;
+  stroke: #FFC120;
 }
 
 .customButton {
@@ -634,5 +657,63 @@ li {
 
 .filterModal .buttons button {
   width: calc(100% / 2 - 15px);
+  margin-left: 15px;
+}
+
+.specialistsSlider {
+  @include adaptive("xxsm"){
+    padding: 0 25px;
+  }
+}
+
+
+.specialistsSlider .cards {
+  margin-left: -15px;
+}
+
+.specialistsSlider .slick-list {
+  overflow: hidden;
+}
+
+.specialistsSlider .slick-arrow {
+  display: block;
+  position: static;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  font-size: 0;
+  left: 0;
+  transform: translate(0,0);
+  @include adaptive("xxsm"){
+    display: none;
+  }
+}
+
+
+.specialistsSlider .slick-prev {
+  order: 2;
+}
+
+.specialistsSlider .slick-next {
+  order: 3;
+}
+
+
+.specialistsSlider .slick-prev:before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 12px;
+  background: url("../assets/icons/SliderPrev.svg") center/contain no-repeat;
+  margin-left: 15px;
+
+}
+
+.specialistsSlider .slick-next:before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 12px;
+  background: url("../assets/icons/SliderNext.svg") center/contain no-repeat;
   margin-left: 15px;
 }
