@@ -16,7 +16,7 @@ a {
   text-decoration: none;
 }
 
-input, button, select, span {
+input, button, select, span, textarea {
   border: none;
   outline: none;
   background: transparent;
@@ -35,6 +35,10 @@ select {
 
 li {
   list-style-type: none;
+}
+
+.slick-slider {
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 769px) {
@@ -106,15 +110,29 @@ li {
 .contentWrapper .contentContainer {
   margin-top: 20px;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  min-height: 0;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: calc(100vh - 100px);
   min-width: 0;
 }
 @media only screen and (max-width: 415px) {
   .contentWrapper .contentContainer {
     margin-top: 0;
   }
+}
+
+.contentWrapper .contentContainer .mainWrapper {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .star svg {
@@ -135,6 +153,10 @@ li {
   font-weight: 500;
   font-size: 14px;
 }
+.customButton:disabled {
+  color: white;
+  background: #C4C5C4;
+}
 
 .customButton.white {
   color: black;
@@ -147,7 +169,7 @@ li {
   padding: 0 20px;
   margin: auto;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 769px) {
   .container {
     padding: 0;
   }
@@ -234,7 +256,7 @@ li {
 }
 
 .specialistCard .header .like svg:hover {
-  fill: #3669C9;
+  fill: #FE3A30;
   stroke: none;
 }
 
@@ -341,12 +363,6 @@ li {
   min-height: 100vh;
 }
 
-.viewWrapper > .container > .contentWrapper {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
 .viewWrapper.blured {
   overflow: hidden;
 }
@@ -425,15 +441,24 @@ li {
           transform: rotate(90deg);
 }
 
-.cookieModal {
+.modal {
   position: fixed;
+  background: white;
+  border-radius: 10px;
+  z-index: 1000;
+  display: none;
+  padding: 25px;
+}
+
+.modal.visible {
+  display: block;
+}
+
+.cookieModal {
+  padding: 0;
   right: 30px;
   bottom: 30px;
   width: 632px;
-  background: white;
-  border-radius: 10px;
-  z-index: 300;
-  display: none;
 }
 @media only screen and (max-width: 769px) {
   .cookieModal {
@@ -445,10 +470,6 @@ li {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-}
-
-.cookieModal.visible {
-  display: block;
 }
 
 .cookieModal .header {
@@ -649,22 +670,10 @@ li {
     display: block;
   }
 }
-@media only screen and (max-width: 415px) {
-  .filters {
-    padding: 0 25px;
-  }
-}
 
 .filterModal {
-  display: none;
-  opacity: 0;
-  padding: 25px;
-  position: fixed;
   max-width: 325px;
   width: 100%;
-  background: white;
-  z-index: 1000;
-  border-radius: 10px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -683,11 +692,6 @@ li {
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
   }
-}
-
-.filterModal.visible {
-  display: block;
-  opacity: 1;
 }
 
 .filterModal .block {
@@ -852,4 +856,74 @@ li {
   height: 12px;
   background: url("../assets/icons/SliderNext.svg") center/contain no-repeat;
   margin-left: 15px;
+}
+
+.commentModal {
+  padding: 60px 50px 55px 50px;
+  max-width: 425px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.commentModal .controls {
+  position: absolute;
+  cursor: pointer;
+  right: 25px;
+  top: 25px;
+}
+.commentModal .controls img {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.commentModal h5 {
+  font-weight: 700;
+  font-size: 25px;
+  color: #0C1A30;
+  margin-bottom: 35px;
+}
+.commentModal .customButton {
+  margin-top: 20px;
+}
+
+.inputWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+.inputWrapper span {
+  font-weight: 400;
+  font-size: 14px;
+  color: #0C1A30;
+  margin-bottom: 20px;
+}
+.inputWrapper input, .inputWrapper textarea {
+  background: #FAFAFA;
+  padding: 16px 20px;
+  border-radius: 12px;
+}
+.inputWrapper input::-webkit-input-placeholder, .inputWrapper textarea::-webkit-input-placeholder {
+  color: #C4C5C4;
+}
+.inputWrapper input::-moz-placeholder, .inputWrapper textarea::-moz-placeholder {
+  color: #C4C5C4;
+}
+.inputWrapper input:-ms-input-placeholder, .inputWrapper textarea:-ms-input-placeholder {
+  color: #C4C5C4;
+}
+.inputWrapper input::-ms-input-placeholder, .inputWrapper textarea::-ms-input-placeholder {
+  color: #C4C5C4;
+}
+.inputWrapper input::placeholder, .inputWrapper textarea::placeholder {
+  color: #C4C5C4;
+}
+.inputWrapper textarea {
+  resize: none;
+  height: 130px;
 }

@@ -1,0 +1,32 @@
+.recrutingForm {
+  max-width: 732px;
+  width: 100%;
+  background: white;
+  border-radius: 15px;
+  padding: 28px 20px;
+  .customButton {
+    margin-top: 10px;
+  }
+  h5 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #0C1A30;
+    margin-bottom: 10px;
+  }
+  p{
+    font-weight: 400;
+    max-width: 70%;
+    font-size: 14px;
+    color: #0C1A30;
+  }
+  .inputs {
+    margin-top: 30px;
+    display: flex;
+    margin-left: -40px;
+
+    section {
+      width: calc(100% / 2 - 40px);
+      margin-left: 40px;
+    }
+  }
+}

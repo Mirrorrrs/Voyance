@@ -1,5 +1,5 @@
 const filterBtn = $(".filters > .customButton")[0]
-const filterModal = $(".filters > .filterModal")[0]
+const filterModal = $(".filterModal")[0]
 const filterTypes = $(".filterTypeSelect span")
 let offsetFirst = {}
 let offsetSecond = {}

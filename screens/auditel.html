@@ -19,7 +19,7 @@
 <body>
 <div class="viewWrapper">
     <div class="blur"></div>
-    <div class="cookieModal ">
+    <div class="cookieModal modal">
         <div class="header">
             <div class="headerWrapper">
                 <h5>Réglages RGPD: gestion des cookies</h5>
@@ -42,8 +42,60 @@
             </div>
         </div>
     </div>
+    <div class="filterModal modal ">
+        <div class="filterContent block">
+            <div class="header">
+                <h4 class="title">
+                    Filtrer & Trier
+                </h4>
+                <div class="controls">
+                    <img src="../assets/icons/Cross.svg" alt="">
+                </div>
+            </div>
+            <div class="filterTypeSelect">
+                <span>Filtrer</span>
+                <span>Trier</span>
+                <div class="selectSlider">
+                </div>
+            </div>
+            <div class="filterOptions">
+                <input id="firstFilterCheckbox" type="checkbox">
+                <label for="firstFilterCheckbox" class="option">
+                    <p>Défaut</p>
+                    <div class="indicator">
+                        <img src="../assets/icons/Accept.svg" alt="">
+                    </div>
+                </label>
+                <input id="secondFilterCheckbox" type="checkbox">
+                <label for="secondFilterCheckbox" class="option">
+                    <p>Défaut</p>
+                    <div class="indicator">
+                        <img src="../assets/icons/Accept.svg" alt="">
+                    </div>
+                </label>
+                <input id="thirdFilterCheckbox" type="checkbox">
+                <label for="thirdFilterCheckbox" class="option">
+                    <p>Défaut</p>
+                    <div class="indicator">
+                        <img src="../assets/icons/Accept.svg" alt="">
+                    </div>
+                </label>
+                <input id="fourthFilterCheckbox" type="checkbox">
+                <label for="fourthFilterCheckbox" class="option">
+                    <p>Défaut</p>
+                    <div class="indicator">
+                        <img src="../assets/icons/Accept.svg" alt="">
+                    </div>
+                </label>
+            </div>
+            <div class="buttons">
+                <button class="customButton white">Annuler</button>
+                <button class="customButton">Appliquer</button>
+            </div>
+        </div>
+    </div>
     <div class="container">
-        <header>
+        <header class="paddingContainer">
             <button class="backButton"><img src="../assets/icons/Arrow.svg" alt=""></button>
             <button class="burgerMenu"><img src="../assets/icons/Burger.svg" alt=""></button>
             <div class="logo">
@@ -194,7 +246,7 @@
             </div>
 
         </header>
-        <div class="contentWrapper">
+        <div class="contentWrapper paddingContainer">
             <div class="sideBar">
                 <div class="sideBarHeader">
                     <button class="burgerMenu"><img src="../assets/icons/Burger.svg" alt=""></button>
@@ -1978,58 +2030,6 @@
                     <button class="customButton white">
                         Filtrer & Trier
                     </button>
-                    <div class="filterModal">
-                        <div class="filterContent block">
-                            <div class="header">
-                                <h4 class="title">
-                                    Filtrer & Trier
-                                </h4>
-                                <div class="controls">
-                                    <img src="../assets/icons/Cross.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="filterTypeSelect">
-                                <span>Filtrer</span>
-                                <span>Trier</span>
-                                <div class="selectSlider">
-                                </div>
-                            </div>
-                            <div class="filterOptions">
-                                <input id="firstFilterCheckbox" type="checkbox">
-                                <label for="firstFilterCheckbox" class="option">
-                                    <p>Défaut</p>
-                                    <div class="indicator">
-                                        <img src="../assets/icons/Accept.svg" alt="">
-                                    </div>
-                                </label>
-                                <input id="secondFilterCheckbox" type="checkbox">
-                                <label for="secondFilterCheckbox" class="option">
-                                    <p>Défaut</p>
-                                    <div class="indicator">
-                                        <img src="../assets/icons/Accept.svg" alt="">
-                                    </div>
-                                </label>
-                                <input id="thirdFilterCheckbox" type="checkbox">
-                                <label for="thirdFilterCheckbox" class="option">
-                                    <p>Défaut</p>
-                                    <div class="indicator">
-                                        <img src="../assets/icons/Accept.svg" alt="">
-                                    </div>
-                                </label>
-                                <input id="fourthFilterCheckbox" type="checkbox">
-                                <label for="fourthFilterCheckbox" class="option">
-                                    <p>Défaut</p>
-                                    <div class="indicator">
-                                        <img src="../assets/icons/Accept.svg" alt="">
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="buttons">
-                                <button class="customButton white">Annuler</button>
-                                <button class="customButton">Appliquer</button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <footer>
                     <p>Pour préserver la vie privée de nos praticiens, toutes les photos sont des photos d'illustration</p>

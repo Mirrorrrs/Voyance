@@ -2,7 +2,7 @@
 @import "mixins";
 
 * {
-  margin:0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -17,7 +17,7 @@ a {
   text-decoration: none;
 }
 
-input, button, select, span {
+input, button, select, span, textarea{
   border: none;
   outline: none;
   background: transparent;
@@ -35,6 +35,10 @@ select {
 
 li {
   list-style-type: none;
+}
+
+.slick-slider {
+  overflow: hidden;
 }
 
 .paddingContainer {
@@ -85,12 +89,19 @@ li {
 
 .contentWrapper .contentContainer {
   margin-top: 20px;
-  flex:1 1 auto;
-  min-height: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 100px);
   min-width: 0;
-  @include adaptive("xxsm"){
+  @include adaptive("xxsm") {
     margin-top: 0;
   }
+}
+
+.contentWrapper .contentContainer .mainWrapper {
+  width: 100%;
+  flex: 1 1 auto;
 }
 
 .star svg {
@@ -110,26 +121,31 @@ li {
   color: white;
   font-weight: 500;
   font-size: 14px;
+
+  &:disabled {
+    color: white;
+    background: #C4C5C4;
+  }
 }
 
 .customButton.white {
   color: black;
   background: white;
-  border:1px solid black;
+  border: 1px solid black;
 }
 
 .container {
   max-width: 1420px;
-  padding:0 20px;
+  padding: 0 20px;
   margin: auto;
-  @include adaptive("xxsm"){
+  @include adaptive("xsm") {
     padding: 0;
   }
 }
 
 .contentContainer {
   margin-left: 32px;
-  @include adaptive("xsm"){
+  @include adaptive("xsm") {
     margin-left: 0;
   }
 }
@@ -142,11 +158,11 @@ li {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   margin-left: 15px;
-  @include adaptive("xsm"){
+  @include adaptive("xsm") {
     width: calc(100% / 4 - 15px);
   }
 
-  @include adaptive("xxsm"){
+  @include adaptive("xxsm") {
     width: calc(100% / 2 - 15px);
   }
 }
@@ -188,6 +204,7 @@ li {
   width: 16px;
   height: 16px;
 }
+
 .specialistCard .header .like svg {
   fill: white;
   stroke: black;
@@ -195,7 +212,7 @@ li {
 }
 
 .specialistCard .header .like svg:hover {
-  fill: #3669C9;
+  fill: #FE3A30;
   stroke: none;
 }
 
@@ -226,7 +243,7 @@ li {
   right: 0;
 }
 
-.specialistCard  .name {
+.specialistCard .name {
   text-transform: uppercase;
   text-align: center;
   font-weight: 500;
@@ -286,17 +303,11 @@ li {
   min-height: 100vh;
 }
 
-
-.viewWrapper > .container > .contentWrapper {
-  flex-grow: 1;
-}
-
-
 .viewWrapper.blured {
   overflow: hidden;
 }
 
-.viewWrapper.blured .blur{
+.viewWrapper.blured .blur {
   opacity: 1;
   z-index: 200;
 
@@ -315,7 +326,7 @@ li {
   flex-direction: column;
   align-items: center;
   margin-top: 0;
-  @include adaptive("xsm"){
+  @include adaptive("xsm") {
     align-items: flex-start;
     margin-left: 12px;
   }
@@ -343,7 +354,7 @@ li {
 }
 
 .dropdownMenu.active .icon svg {
-  fill: white!important;
+  fill: white !important;
 }
 
 .dropdownMenu.active .icon {
@@ -358,28 +369,32 @@ li {
   transform: rotate(90deg);
 }
 
+.modal {
+  position: fixed;
+  background: white;
+  border-radius: 10px;
+  z-index: 1000;
+  display: none;
+  padding: 25px;
+}
+
+.modal.visible {
+  display: block;
+}
 
 .cookieModal {
-  position: fixed;
+  padding: 0;
   right: 30px;
   bottom: 30px;
   width: 632px;
-  background: white;
-  border-radius: 10px;
-  z-index: 300;
-  display: none;
-  @include adaptive("xsm"){
+  @include adaptive("xsm") {
     width: 90%;
     top: 50%;
-    left:50%;
+    left: 50%;
     right: auto;
     bottom: auto;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
-}
-
-.cookieModal.visible {
-  display: block;
 }
 
 
@@ -402,24 +417,27 @@ li {
   display: flex;
   justify-content: space-between;
   margin-left: -30px;
-  @include adaptive("xxsm"){
+  @include adaptive("xxsm") {
     width: 100%;
     margin-left: 0;
     margin-top: -35px;
     flex-direction: column;
     justify-content: center;
   }
+
   .buttons {
     display: none;
     margin-top: 30px;
     margin-left: -15px;
+
     .customButton {
       width: calc(100% / 2 - 15px);
       border-radius: 10px;
       text-align: center;
       margin-left: 15px;
     }
-    @include adaptive("xxsm"){
+
+    @include adaptive("xxsm") {
       display: flex;
     }
   }
@@ -428,20 +446,20 @@ li {
 .cookieModal .sections section {
   width: calc(100% / 2 - 30px);
   margin-left: 30px;
-  @include adaptive("xxsm"){
+  @include adaptive("xxsm") {
     margin-left: 0;
     width: 100%;
     margin-top: 35px;
   }
 }
 
-.cookieModal .sections section h6{
+.cookieModal .sections section h6 {
   font-weight: 500;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.85);
 }
 
-.cookieModal .sections section p{
+.cookieModal .sections section p {
   font-weight: normal;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.85);
@@ -450,7 +468,7 @@ li {
 
 .cookieModal .sections section .customButton {
   margin-top: 30px;
-  @include adaptive("xxsm"){
+  @include adaptive("xxsm") {
     display: none;
   }
 }
@@ -463,7 +481,7 @@ li {
 
 
 .questions {
-  @include adaptive("xxsm"){
+  @include adaptive("xxsm") {
     padding: 0 25px;
   }
 }
@@ -498,12 +516,12 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition:.2s
+  transition: .2s
 }
 
 .questions .question button svg {
-  fill:#06070C;
-  transition:.2s
+  fill: #06070C;
+  transition: .2s
 }
 
 .questions .dropdownMenu.active button {
@@ -517,7 +535,7 @@ li {
 
 
 .questions .question .hiddenContent .menuWrapper {
-  padding: 0 42px ;
+  padding: 0 42px;
 }
 
 .questions .question .content .text {
@@ -540,43 +558,29 @@ li {
 .filters {
   display: none;
   margin-top: 30px;
-  @include adaptive("xsm"){
+  @include adaptive("xsm") {
     display: block;
   }
 
-  @include adaptive("xxsm"){
-    padding: 0 25px;
-  }
 }
 
 .filterModal {
-  display: none;
-  opacity: 0;
-  padding: 25px;
-  position: fixed;
   max-width: 325px;
   width: 100%;
-  background: white;
-  z-index: 1000;
-  border-radius: 10px;
-  @include adaptive("xsm"){
+  @include adaptive("xsm") {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
-  @include adaptive("xxsm"){
+  @include adaptive("xxsm") {
     bottom: 35px;
-    top:auto;
-    transform: translate(-50%,0);
+    top: auto;
+    transform: translate(-50%, 0);
   }
   transition: .2s;
 }
 
-.filterModal.visible {
-  display: block;
-  opacity: 1;
-}
 
 .filterModal .block {
   margin-top: 0;
@@ -608,7 +612,7 @@ li {
   bottom: 0;
   width: 39px;
   height: 2px;
-  background:#3669C9;
+  background: #3669C9;
   transition: .2s;
 }
 
@@ -655,6 +659,7 @@ li {
 
 .filterModal .filterOptions input:checked + .option {
   color: red !important;
+
   .indicator {
     opacity: 1;
   }
@@ -687,8 +692,8 @@ li {
   top: 0;
   font-size: 0;
   left: 0;
-  transform: translate(0,0);
-  @include adaptive("xxsm"){
+  transform: translate(0, 0);
+  @include adaptive("xxsm") {
     display: none;
   }
 }
@@ -720,4 +725,62 @@ li {
   height: 12px;
   background: url("../assets/icons/SliderNext.svg") center/contain no-repeat;
   margin-left: 15px;
+}
+
+.commentModal {
+  padding: 60px 50px 55px 50px;
+  max-width: 425px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .controls {
+    position: absolute;
+    cursor: pointer;
+    right: 25px;
+    top:25px;
+    img {
+      transform: rotate(45deg);
+    }
+  }
+
+  h5 {
+    font-weight: 700;
+    font-size: 25px;
+    color: #0C1A30;
+    margin-bottom: 35px;
+  }
+
+  .customButton {
+    margin-top: 20px;
+  }
+
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  span {
+    font-weight: 400;
+    font-size: 14px;
+    color: #0C1A30;
+    margin-bottom: 20px;
+  }
+
+  input, textarea{
+    background: #FAFAFA;
+    padding: 16px 20px;
+    border-radius: 12px;
+    &::placeholder {
+      color: #C4C5C4;
+    }
+  }
+
+  textarea {
+    resize: none;
+    height: 130px;
+  }
 }

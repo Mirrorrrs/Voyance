@@ -1,0 +1,28 @@
+.emptyDisplay {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    font-weight: 700;
+    font-size: 22px;
+    margin-top: 30px;
+    color: #0C1A30;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 20px;
+    color: #0C1A30;
+  }
+
+  .customButton {
+    margin-top: 20px;
+    max-width: 325px;
+  }
+}

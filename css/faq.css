@@ -1,0 +1,42 @@
+.faqWrapper {
+  width: 100%;
+  background: white;
+  border-radius: 15px;
+  padding: 28px 20px;
+}
+.faqWrapper .block {
+  margin-top: 0;
+}
+.faqWrapper .inputWrapper {
+  margin-top: 30px;
+}
+.faqWrapper .questionsWrapper {
+  padding: 0;
+  margin-top: 35px;
+}
+.faqWrapper .questionsWrapper .question:last-child {
+  padding-bottom: 0;
+  border: 0;
+}
+.faqWrapper .types {
+  margin-top: 20px;
+  margin-left: -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.faqWrapper .types .type {
+  margin-top: 10px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  border: 1px solid #EDEDED;
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.faqWrapper .types .type.checked {
+  color: #3669C9;
+  background: #EFF5FB;
+}

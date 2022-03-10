@@ -1,0 +1,39 @@
+.faqWrapper {
+  width: 100%;
+  background: white;
+  border-radius: 15px;
+  padding: 28px 20px;
+  .block {
+    margin-top: 0;
+  }
+  .inputWrapper {
+    margin-top: 30px;
+  }
+  .questionsWrapper {
+    padding: 0;
+    margin-top: 35px;
+    .question:last-child {
+      padding-bottom: 0;
+      border: 0;
+    }
+  }
+  .types {
+    margin-top: 20px;
+    margin-left: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    .type {
+      margin-top: 10px;
+      padding: 5px 20px;
+      border-radius: 10px;
+      border: 1px solid #EDEDED;
+      font-weight: 500;
+      font-size: 14px;
+      margin-left: 10px;
+      &.checked {
+      color:#3669C9;
+        background: #EFF5FB;
+      }
+    }
+  }
+}
