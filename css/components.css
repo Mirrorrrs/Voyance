@@ -37,6 +37,19 @@ li {
   list-style-type: none;
 }
 
+@media only screen and (max-width: 769px) {
+  .paddingContainer {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+}
+@media only screen and (max-width: 415px) {
+  .paddingContainer {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+}
+
 .block {
   margin-top: 30px;
 }
@@ -784,12 +797,6 @@ li {
 .filterModal .buttons button {
   width: calc(100% / 2 - 15px);
   margin-left: 15px;
-}
-
-@media only screen and (max-width: 415px) {
-  .specialistsSlider {
-    padding: 0 25px;
-  }
 }
 
 .specialistsSlider .cards {

@@ -54,8 +54,6 @@ header .backButton, .sideBarHeader .backButton {
 @media only screen and (max-width: 415px) {
   header, .sideBarHeader {
     background: white;
-    padding-left: 25px;
-    padding-right: 25px;
   }
 }
 

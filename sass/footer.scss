@@ -13,10 +13,6 @@ footer {
     align-items: flex-start;
   }
 
-  @include adaptive("xxsm"){
-    padding: 28px 25px;
-    flex-direction: column;
-  }
 }
 
 footer p{

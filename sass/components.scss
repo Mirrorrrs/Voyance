@@ -37,6 +37,17 @@ li {
   list-style-type: none;
 }
 
+.paddingContainer {
+  @include adaptive("xsm") {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+  @include adaptive("xxsm") {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+}
+
 .block {
   margin-top: 30px;
 }
@@ -659,13 +670,6 @@ li {
   width: calc(100% / 2 - 15px);
   margin-left: 15px;
 }
-
-.specialistsSlider {
-  @include adaptive("xxsm"){
-    padding: 0 25px;
-  }
-}
-
 
 .specialistsSlider .cards {
   margin-left: -15px;
