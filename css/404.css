@@ -1,3 +1,9 @@
+@media only screen and (max-width: 415px) {
+  .container {
+    background: white;
+  }
+}
+
 .emptyDisplay {
   display: -webkit-box;
   display: -ms-flexbox;

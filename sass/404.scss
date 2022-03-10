@@ -1,3 +1,12 @@
+@import "mixins";
+
+.container {
+  @include adaptive("xxsm"){
+    background: white;
+
+  }
+}
+
 .emptyDisplay {
   display: flex;
   width: 100%;

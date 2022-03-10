@@ -38,6 +38,12 @@
   display: flex;
   align-items: center;
   margin-left: 25px;
+  @include adaptive("xsm"){
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
 }
 
 .infoIcons span {

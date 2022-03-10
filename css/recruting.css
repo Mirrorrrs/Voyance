@@ -1,9 +1,21 @@
+@media only screen and (max-width: 415px) {
+  .mainWrapper {
+    background: white;
+  }
+}
+
 .recrutingForm {
   max-width: 732px;
   width: 100%;
   background: white;
   border-radius: 15px;
   padding: 28px 20px;
+}
+@media only screen and (max-width: 415px) {
+  .recrutingForm {
+    padding: 0;
+    margin-top: 30px;
+  }
 }
 .recrutingForm .customButton {
   margin-top: 10px;
@@ -27,7 +39,25 @@
   display: flex;
   margin-left: -40px;
 }
+@media only screen and (max-width: 415px) {
+  .recrutingForm .inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0;
+  }
+}
 .recrutingForm .inputs section {
   width: calc(100% / 2 - 40px);
   margin-left: 40px;
+}
+@media only screen and (max-width: 415px) {
+  .recrutingForm .inputs section {
+    width: 100%;
+    margin-left: 0;
+  }
+  .recrutingForm .inputs section .inputWrapper {
+    margin-bottom: 30px;
+  }
 }

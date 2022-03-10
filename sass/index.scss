@@ -1,5 +1,13 @@
 @import "mixins";
 
+.navLinks {
+a{
+  color: #3669C9;
+  margin-left: 20px;
+}
+
+}
+
 .contentContainer .ads {
   width: 100%;
   display: flex;

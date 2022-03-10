@@ -1,3 +1,5 @@
+@import "mixins";
+
 .specialistCard .header .like svg {
   fill: #FE3A30 !important;
   stroke: none !important;
@@ -33,6 +35,9 @@
 }
 
 .container.empty {
+  @include adaptive("xxsm"){
+    background: white;
+  }
   .infoIcons {
     display: none;
   }

@@ -49,6 +49,7 @@ header .backButton, .sideBarHeader .backButton {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    background: white;
   }
 }
 @media only screen and (max-width: 415px) {

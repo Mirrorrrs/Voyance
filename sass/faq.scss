@@ -1,8 +1,27 @@
+@import "mixins";
+
+.mainWrapper {
+  @include adaptive("xxsm"){
+    background: white;
+  }
+}
+
+.questions   {
+  @include adaptive("xxsm"){
+    padding: 0 !important;
+  }
+}
+
 .faqWrapper {
   width: 100%;
   background: white;
   border-radius: 15px;
   padding: 28px 20px;
+  @include adaptive("xxsm"){
+    padding: 0;
+    margin-top: 30px;
+    padding-bottom: 40px;
+  }
   .block {
     margin-top: 0;
   }
@@ -12,6 +31,7 @@
   .questionsWrapper {
     padding: 0;
     margin-top: 35px;
+
     .question:last-child {
       padding-bottom: 0;
       border: 0;

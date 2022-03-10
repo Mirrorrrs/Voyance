@@ -1,8 +1,27 @@
+@media only screen and (max-width: 415px) {
+  .mainWrapper {
+    background: white;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .questions {
+    padding: 0 !important;
+  }
+}
+
 .faqWrapper {
   width: 100%;
   background: white;
   border-radius: 15px;
   padding: 28px 20px;
+}
+@media only screen and (max-width: 415px) {
+  .faqWrapper {
+    padding: 0;
+    margin-top: 30px;
+    padding-bottom: 40px;
+  }
 }
 .faqWrapper .block {
   margin-top: 0;

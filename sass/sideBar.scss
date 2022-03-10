@@ -42,6 +42,7 @@ header, .sideBarHeader {
   @include adaptive("xsm") {
     display: flex;
     justify-content: space-between;
+    background: white;
   }
 
   @include adaptive("xxsm"){

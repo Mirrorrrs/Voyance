@@ -1,9 +1,21 @@
+@import "mixins";
+
+.mainWrapper {
+  @include adaptive('xxsm'){
+    background: white;
+  }
+}
+
 .recrutingForm {
   max-width: 732px;
   width: 100%;
   background: white;
   border-radius: 15px;
   padding: 28px 20px;
+  @include adaptive("xxsm"){
+    padding: 0;
+    margin-top: 30px;
+  }
   .customButton {
     margin-top: 10px;
   }
@@ -23,10 +35,20 @@
     margin-top: 30px;
     display: flex;
     margin-left: -40px;
-
+    @include adaptive('xxsm'){
+      flex-direction: column;
+      margin-left: 0;
+    }
     section {
       width: calc(100% / 2 - 40px);
       margin-left: 40px;
+      @include adaptive('xxsm'){
+        width: 100%;
+        margin-left: 0;
+        .inputWrapper {
+          margin-bottom: 30px;
+        }
+      }
     }
   }
 }
