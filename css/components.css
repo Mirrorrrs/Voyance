@@ -157,6 +157,12 @@ li {
   color: white;
   font-weight: 500;
   font-size: 14px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.customButton:hover {
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .customButton:disabled {
   color: white;
@@ -194,8 +200,8 @@ li {
   min-height: 258px;
   padding: 15px 19px;
   background: white;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   margin-left: 15px;
 }
@@ -213,6 +219,24 @@ li {
 .specialistCard .buttons button {
   margin-left: 10px;
   background: #3669C9;
+}
+.specialistCard .buttons button:hover {
+  -webkit-box-shadow: 0px 0px 8px rgba(54, 105, 201, 0.5);
+          box-shadow: 0px 0px 8px rgba(54, 105, 201, 0.5);
+}
+
+.specialistCard.green .buttons button {
+  background: #3A9B7A;
+}
+.specialistCard.green .buttons button:hover {
+  -webkit-box-shadow: 0px 0px 8px rgba(58, 155, 122, 0.5);
+          box-shadow: 0px 0px 8px rgba(58, 155, 122, 0.5);
+}
+
+.specialistCard .buttons button.circledIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px !important;
 }
 
 .specialistCard .header {
@@ -309,8 +333,12 @@ li {
   font-weight: 500;
   font-size: 10px;
   text-align: center;
-  color: #3A9B7A;
+  color: #3669C9;
   margin-top: 5px;
+}
+
+.specialistCard.green .time {
+  color: #3A9B7A;
 }
 
 .specialistCard .buttons {
@@ -334,6 +362,19 @@ li {
   margin-top: 10px;
 }
 
+.specialistCard .rating .stars, .specialistCard .rating .calls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.specialistCard .rating .stars img, .specialistCard .rating .calls img {
+  width: 8px;
+  height: 8px;
+}
+
 .specialistCard .rating .calls {
   margin-left: 10px;
 }
@@ -342,6 +383,7 @@ li {
   font-weight: normal;
   font-size: 10px;
   color: #0C1A30;
+  margin-left: 4px;
 }
 
 .blur {
@@ -442,8 +484,8 @@ li {
 }
 
 .dropdownMenu.active .content .arrow {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .modal {
@@ -627,8 +669,14 @@ li {
 
 .questions .question {
   padding-bottom: 20px;
+  cursor: pointer;
   margin-top: 20px;
   border-bottom: 1px solid #EDEDED;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.questions .question:hover {
+  border-bottom: 1px solid black;
 }
 
 .questions .question button {

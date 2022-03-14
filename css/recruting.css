@@ -32,6 +32,11 @@
   font-size: 14px;
   color: #0C1A30;
 }
+@media only screen and (max-width: 415px) {
+  .recrutingForm p {
+    max-width: 100%;
+  }
+}
 .recrutingForm .inputs {
   margin-top: 30px;
   display: -webkit-box;

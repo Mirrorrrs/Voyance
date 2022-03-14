@@ -149,9 +149,37 @@ a{
   margin-left: 20px;
   transition: .2s;
   margin-top: 20px;
+  
+  &:nth-child(2){
+    .info {
+      .circledIcon {
+        background: #FFF6E4;
+      }
+    }
+  }
+
+  &:nth-child(3){
+    .info {
+      .circledIcon {
+        background: #FFECE8;
+      }
+    }
+  }
+
+  &:nth-child(4){
+    .info {
+      .circledIcon {
+        background: #F1EDFC;
+      }
+    }
+  }
+  
   @include adaptive("xsm") {
     width: calc(100% / 4 - 30px);
     margin-left: 30px;
+    & > img {
+      display: none;
+    }
   }
 
   @include adaptive("xxsm"){
@@ -195,9 +223,4 @@ a{
   }
 }
 
-.categories .cards .card img {
-  @include adaptive("xsm"){
-    display: none;
-  }
-}
 

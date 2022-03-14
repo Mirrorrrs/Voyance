@@ -237,6 +237,12 @@ header .contentContainer {
   padding-bottom: 20px;
   border-bottom: 1px solid #EDEDED;
   margin-top: 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.searchBar .searchResults .result:hover {
+  opacity: 0.8;
 }
 
 .searchBar .searchResults .result:last-child {
@@ -295,6 +301,22 @@ header .contentContainer {
   border-radius: 50%;
 }
 
+.searchBar .searchResults .result .raiting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.searchBar .searchResults .result .raiting span {
+  font-weight: 500;
+  font-size: 16px;
+  color: #0C1A30;
+  margin-left: 5px;
+}
+
 .searchBar .searchResults.empty .result {
   display: none;
 }
@@ -318,14 +340,24 @@ header .contentContainer {
 
 .searchBar .searchResults .emptyWindow {
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .searchBar .searchResults.empty .emptyWindow {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .searchBar .searchResults.empty .emptyWindow p {
   text-align: center;
+  margin-top: 25px;
 }
 
 .searchBar .searchResults.empty .emptyWindow p:nth-of-type(1) {
@@ -421,8 +453,8 @@ header .contentContainer {
 .sideBar nav li .content .arrow {
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .sideBar nav .icon {

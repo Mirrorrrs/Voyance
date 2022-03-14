@@ -189,6 +189,11 @@ header .contentContainer {
   padding-bottom: 20px;
   border-bottom: 1px solid #EDEDED;
   margin-top: 20px;
+  transition: .2s;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 
@@ -239,6 +244,18 @@ header .contentContainer {
   border-radius: 50%;
 }
 
+.searchBar .searchResults .result .raiting {
+  display: flex;
+  align-items: center;
+}
+
+.searchBar .searchResults .result .raiting span {
+  font-weight: 500;
+  font-size: 16px;
+  color: #0C1A30;
+  margin-left: 5px;
+}
+
 .searchBar .searchResults.empty .result{
   display: none;
 }
@@ -256,14 +273,17 @@ header .contentContainer {
 
 .searchBar .searchResults .emptyWindow {
   display: none;
+  flex-direction: column;
+  align-items: center;
 }
 
 .searchBar .searchResults.empty .emptyWindow {
-  display: block;
+  display: flex;
 }
 
 .searchBar .searchResults.empty .emptyWindow p {
   text-align: center;
+  margin-top: 25px;
 }
 
 .searchBar .searchResults.empty .emptyWindow p:nth-of-type(1){
@@ -338,7 +358,7 @@ header .contentContainer {
 
 .sideBar nav li .content .arrow {
   transition: .2s;
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
 }
 
 .sideBar nav .icon {
