@@ -598,8 +598,7 @@ body {
     width: 100%;
     height: 85px;
     background: #FAFAFA;
-    position: absolute;
-    top: 20px;
+    margin-top: 20px;
   }
   .info {
     margin-top: 30px;
@@ -650,6 +649,9 @@ body {
     justify-content: center;
     margin-top: 50px;
     position: relative;
+    @include adaptive("xxsm"){
+      margin-top: -60px;
+    }
     .icon {
       width: 143px;
       height: 143px;
@@ -689,6 +691,7 @@ body {
 
     }
   }
+
 }
 
 .profileHeaderWrapper {

@@ -17,6 +17,7 @@
     <script src="../js/libs/slick.min.js" defer></script>
     <script src="../js/sideBar.js" defer></script>
     <script src="../js/index.js" defer></script>
+    <script src="../js/buttons.js" defer></script>
 </head>
 <body>
 <div class="viewWrapper">
@@ -44,9 +45,9 @@
             </div>
         </div>
     </div>
-    <div class="commentModal modal">
-        <form action="">
-            <div class="controls">
+    <div class="commentModal modal paddingContainer">
+        <form action="" >
+            <div class="controls closeCommentModal">
                 <img src="../assets/icons/Cross.svg" alt="">
             </div>
             <h5>Veuillez remplir le formulaire</h5>
@@ -4648,10 +4649,10 @@
 
                         </div>
                         <div class="buttons">
-                            <button class="customButton">
+                            <button class="customButton openCommentModal">
                                 Laisser un avis
                             </button>
-                            <button class="customButton white">
+                            <button class="customButton white closeCommentModal">
                                 Voir Tous Les Avis
                             </button>
                         </div>

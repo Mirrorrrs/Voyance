@@ -1,6 +1,6 @@
 @import "mixins";
 
-header, .sideBarHeader {
+header, .sideBarHeader, .searchBarHeader {
   padding-top: 22px;
   padding-bottom: 15px;
   display: flex;
@@ -174,6 +174,9 @@ header .contentContainer {
   opacity: 0;
   transition: .5s;
   padding:8px 25px 39px 25px;
+  .emptyWindow {
+    display: none;
+  }
 }
 
 .searchBar .searchResults.visible {
@@ -271,38 +274,19 @@ header .contentContainer {
   align-items: center;
 }
 
-.searchBar .searchResults .emptyWindow {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-}
-
 .searchBar .searchResults.empty .emptyWindow {
   display: flex;
 }
 
-.searchBar .searchResults.empty .emptyWindow p {
-  text-align: center;
-  margin-top: 25px;
-}
-
-.searchBar .searchResults.empty .emptyWindow p:nth-of-type(1){
-  font-weight: 500;
-  font-size: 16px;
-  text-transform: capitalize;
-  color: #000000;
-}
-
-.searchBar .searchResults.empty .emptyWindow p:nth-of-type(2){
-  font-weight: normal;
-  font-size: 14px;
-  color: #838589;
-  margin-top: 20px;
-}
 
 .sideBar {
   max-width: 220px    ;
   width: 100%;
+
+}
+
+
+.sideBar, .searchModal {
   @include adaptive("xsm") {
     position: fixed;
     background: white;
@@ -315,20 +299,137 @@ header .contentContainer {
   }
 }
 
-.sideBar.visible {
+.sideBar.visible, .searchModal.visible {
   top:0
 }
+
+
 
 .sideBar nav {
   border-top: 1px solid #E0E1E2;
 }
 
-.sideBar .sideBarHeader {
+.sideBar .sideBarHeader, .searchModal .searchBarHeader {
   display: none;
   @include adaptive("xsm"){
     display: flex;
   }
 }
+
+.searchModal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y:scroll;
+  position: fixed;
+  top:-100%;
+  .inputWrapper {
+    margin-top: 25px;
+  }
+  .top {
+    flex: 1 1 auto;
+    .recents {
+      margin-top: 10px;
+      h6 {
+        font-weight: 500;
+        font-size: 14px;
+        color: #0C1A30;
+      }
+      .recent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 25px;
+        > img {
+          transform: rotate(45deg);
+        }
+        .data {
+          display: flex;
+          align-items: center;
+          p {
+            font-weight: 400;
+            font-size: 14px;
+            color: #0C1A30;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    .results {
+      width: 100%;
+      display: none;
+      .result {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .imageWrapper {
+          width: 45px;
+          height: 45px;
+          margin-right: 20px;
+        }
+        .data {
+          display: flex;
+          align-items: center;
+          .text {
+            p {
+              font-weight: 500;
+              font-size: 14px;
+              color: #0C1A30;
+            }
+            span {
+              font-weight: 400;
+              font-size: 12px;
+              color: #3A9B7A
+            }
+          }
+        }
+        .raiting {
+          span {
+            font-weight: 500;
+            font-size: 16px;
+            color: #0C1A30;
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    .specialistsSlider {
+      background: #FAFAFA;
+      padding: 20px 0;
+    }
+  }
+  &.resultsVisible {
+    .bottom {
+      display: none;
+    }
+    .top .recents {
+      display: none;
+    }
+    .top .results {
+      display: block;
+    }
+  }
+}
+
+
+.searchModal .searchBarHeader {
+  h5 {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000
+  }
+  .burgerMenu {
+    transform: rotate(180deg);
+  }
+
+
+
+}
+
 
 .sideBar nav ul {
   margin-top: 22px;

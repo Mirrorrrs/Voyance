@@ -4,6 +4,7 @@ const viewWrapper = $(".viewWrapper")[0]
 const searchResults = $(".searchBar .searchResults")[0]
 const sideBar = $(".sideBar")[0]
 const menuButton = $(".burgerMenu")
+const backButton = $(".backButton")
 Array.from(dropdownItems).forEach(item=>{
     item.onclick = (ev)=>{
         item.classList.toggle("active")
@@ -33,7 +34,7 @@ searchInput.oninput = (ev)=>{
 menuButton.each((num,el)=>{
     el.onclick = ()=>{
         sideBar.classList.toggle("visible")
-        scrollEnabled ? disableScroll() : enableScroll()
+        document.body.classList.toggle("wrap")
     }
 })
 

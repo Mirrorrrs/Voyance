@@ -1,4 +1,4 @@
-header, .sideBarHeader {
+header, .sideBarHeader, .searchBarHeader {
   padding-top: 22px;
   padding-bottom: 15px;
   display: -webkit-box;
@@ -8,41 +8,41 @@ header, .sideBarHeader {
       -ms-flex-align: center;
           align-items: center;
 }
-header .burgerMenu, header .searchButton, header .backButton, .sideBarHeader .burgerMenu, .sideBarHeader .searchButton, .sideBarHeader .backButton {
+header .burgerMenu, header .searchButton, header .backButton, .sideBarHeader .burgerMenu, .sideBarHeader .searchButton, .sideBarHeader .backButton, .searchBarHeader .burgerMenu, .searchBarHeader .searchButton, .searchBarHeader .backButton {
   display: none;
   width: 18px;
   height: 14px;
 }
 @media only screen and (max-width: 769px) {
-  header .burgerMenu img, header .searchButton img, header .backButton img, .sideBarHeader .burgerMenu img, .sideBarHeader .searchButton img, .sideBarHeader .backButton img {
+  header .burgerMenu img, header .searchButton img, header .backButton img, .sideBarHeader .burgerMenu img, .sideBarHeader .searchButton img, .sideBarHeader .backButton img, .searchBarHeader .burgerMenu img, .searchBarHeader .searchButton img, .searchBarHeader .backButton img {
     display: block;
     width: 100%;
     height: 100%;
   }
 }
-header .searchButton, .sideBarHeader .searchButton {
+header .searchButton, .sideBarHeader .searchButton, .searchBarHeader .searchButton {
   width: 20px;
   height: 20px;
 }
 @media only screen and (max-width: 769px) {
-  header .burgerMenu, header .searchButton, .sideBarHeader .burgerMenu, .sideBarHeader .searchButton {
+  header .burgerMenu, header .searchButton, .sideBarHeader .burgerMenu, .sideBarHeader .searchButton, .searchBarHeader .burgerMenu, .searchBarHeader .searchButton {
     display: block;
   }
 }
-header .backButton, .sideBarHeader .backButton {
+header .backButton, .sideBarHeader .backButton, .searchBarHeader .backButton {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 @media only screen and (max-width: 415px) {
-  header .backButton, .sideBarHeader .backButton {
+  header .backButton, .sideBarHeader .backButton, .searchBarHeader .backButton {
     display: block;
   }
-  header .backButton ~ .burgerMenu, .sideBarHeader .backButton ~ .burgerMenu {
+  header .backButton ~ .burgerMenu, .sideBarHeader .backButton ~ .burgerMenu, .searchBarHeader .backButton ~ .burgerMenu {
     display: none;
   }
 }
 @media only screen and (max-width: 769px) {
-  header, .sideBarHeader {
+  header, .sideBarHeader, .searchBarHeader {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -53,7 +53,7 @@ header .backButton, .sideBarHeader .backButton {
   }
 }
 @media only screen and (max-width: 415px) {
-  header, .sideBarHeader {
+  header, .sideBarHeader, .searchBarHeader {
     background: white;
   }
 }
@@ -218,6 +218,9 @@ header .contentContainer {
   transition: 0.5s;
   padding: 8px 25px 39px 25px;
 }
+.searchBar .searchResults .emptyWindow {
+  display: none;
+}
 
 .searchBar .searchResults.visible {
   opacity: 1;
@@ -338,48 +341,19 @@ header .contentContainer {
           align-items: center;
 }
 
-.searchBar .searchResults .emptyWindow {
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .searchBar .searchResults.empty .emptyWindow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.searchBar .searchResults.empty .emptyWindow p {
-  text-align: center;
-  margin-top: 25px;
-}
-
-.searchBar .searchResults.empty .emptyWindow p:nth-of-type(1) {
-  font-weight: 500;
-  font-size: 16px;
-  text-transform: capitalize;
-  color: #000000;
-}
-
-.searchBar .searchResults.empty .emptyWindow p:nth-of-type(2) {
-  font-weight: normal;
-  font-size: 14px;
-  color: #838589;
-  margin-top: 20px;
-}
-
 .sideBar {
   max-width: 220px;
   width: 100%;
 }
+
 @media only screen and (max-width: 769px) {
-  .sideBar {
+  .sideBar, .searchModal {
     position: fixed;
     background: white;
     max-width: 100vw;
@@ -392,7 +366,7 @@ header .contentContainer {
   }
 }
 
-.sideBar.visible {
+.sideBar.visible, .searchModal.visible {
   top: 0;
 }
 
@@ -400,15 +374,144 @@ header .contentContainer {
   border-top: 1px solid #E0E1E2;
 }
 
-.sideBar .sideBarHeader {
+.sideBar .sideBarHeader, .searchModal .searchBarHeader {
   display: none;
 }
 @media only screen and (max-width: 769px) {
-  .sideBar .sideBarHeader {
+  .sideBar .sideBarHeader, .searchModal .searchBarHeader {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.searchModal {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  top: -100%;
+}
+.searchModal .inputWrapper {
+  margin-top: 25px;
+}
+.searchModal .top {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.searchModal .top .recents {
+  margin-top: 10px;
+}
+.searchModal .top .recents h6 {
+  font-weight: 500;
+  font-size: 14px;
+  color: #0C1A30;
+}
+.searchModal .top .recents .recent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 25px;
+}
+.searchModal .top .recents .recent > img {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.searchModal .top .recents .recent .data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.searchModal .top .recents .recent .data p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #0C1A30;
+  margin-left: 10px;
+}
+.searchModal .top .results {
+  width: 100%;
+  display: none;
+}
+.searchModal .top .results .result {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.searchModal .top .results .result .imageWrapper {
+  width: 45px;
+  height: 45px;
+  margin-right: 20px;
+}
+.searchModal .top .results .result .data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.searchModal .top .results .result .data .text p {
+  font-weight: 500;
+  font-size: 14px;
+  color: #0C1A30;
+}
+.searchModal .top .results .result .data .text span {
+  font-weight: 400;
+  font-size: 12px;
+  color: #3A9B7A;
+}
+.searchModal .top .results .result .raiting span {
+  font-weight: 500;
+  font-size: 16px;
+  color: #0C1A30;
+  margin-left: 4px;
+}
+.searchModal .bottom .specialistsSlider {
+  background: #FAFAFA;
+  padding: 20px 0;
+}
+.searchModal.resultsVisible .bottom {
+  display: none;
+}
+.searchModal.resultsVisible .top .recents {
+  display: none;
+}
+.searchModal.resultsVisible .top .results {
+  display: block;
+}
+
+.searchModal .searchBarHeader h5 {
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+}
+.searchModal .searchBarHeader .burgerMenu {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .sideBar nav ul {

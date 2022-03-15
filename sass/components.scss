@@ -12,6 +12,11 @@ body {
   font-family: "DM Sans";
 }
 
+body.wrap {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -250,13 +255,13 @@ li {
 
 }
 
-.specialistCard .picture .imageWrapper {
+.imageWrapper {
   position: relative;
   width: 74px;
   height: 74px;
 }
 
-.specialistCard .picture .imageWrapper .profile {
+.imageWrapper .profile {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -264,7 +269,7 @@ li {
 }
 
 
-.specialistCard .picture .imageWrapper .country {
+ .imageWrapper .country {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -346,15 +351,7 @@ li {
   min-height: 100vh;
 }
 
-.viewWrapper.blured {
-  overflow: hidden;
-}
 
-.viewWrapper.blured .blur {
-  opacity: 1;
-  z-index: 200;
-
-}
 
 .dropdownMenu .hiddenContent {
   height: 0;
@@ -423,6 +420,16 @@ li {
 
 .modal.visible {
   display: block;
+
+ & + .viewWrapper {
+    overflow: hidden;
+  }
+
+ & + .viewWrapper .blur {
+    opacity: 1;
+    z-index: 200;
+
+  }
 }
 
 .cookieModal {
@@ -494,6 +501,16 @@ li {
     width: 100%;
     margin-top: 35px;
   }
+}
+
+.viewWrapper.blured {
+  overflow: hidden;
+}
+
+.viewWrapper.blured .blur {
+  opacity: 1;
+  z-index: 200;
+
 }
 
 .cookieModal .sections section h6 {
@@ -801,6 +818,16 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @include adaptive("xxsm"){
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    &.visible {
+      display: flex;
+    }
+  }
 
   .controls {
     position: absolute;
@@ -809,6 +836,9 @@ li {
     top:25px;
     img {
       transform: rotate(45deg);
+    }
+    @include adaptive("xxsm"){
+      left: 25px;
     }
   }
 
@@ -849,5 +879,56 @@ li {
   textarea {
     resize: none;
     height: 130px;
+  }
+}
+
+
+.emptyWindow {
+  flex-direction: column;
+  align-items: center;
+}
+
+.emptyWindow p {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.emptyWindow p:nth-of-type(1){
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.emptyWindow p:nth-of-type(2){
+  font-weight: normal;
+  font-size: 14px;
+  color: #838589;
+  margin-top: 20px;
+}
+
+.successModal {
+  max-width: 325px;
+  height: auto;
+  padding: 45px 25px 25px 25px;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  .emptyWindow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .icon {
+      width: 50px;
+      height: 50px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  .customButton {
+    margin-top: 45px;
   }
 }

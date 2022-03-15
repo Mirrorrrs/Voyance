@@ -670,8 +670,7 @@
   width: 100%;
   height: 85px;
   background: #FAFAFA;
-  position: absolute;
-  top: 20px;
+  margin-top: 20px;
 }
 .mobileHeader .info {
   margin-top: 30px;
@@ -730,6 +729,11 @@
           justify-content: center;
   margin-top: 50px;
   position: relative;
+}
+@media only screen and (max-width: 415px) {
+  .mobileHeader .iconWrapper {
+    margin-top: -60px;
+  }
 }
 .mobileHeader .iconWrapper .icon {
   width: 143px;
