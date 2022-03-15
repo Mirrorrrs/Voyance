@@ -309,7 +309,7 @@ header .contentContainer {
   border-top: 1px solid #E0E1E2;
 }
 
-.sideBar .sideBarHeader, .searchModal .searchBarHeader {
+.sideBar .sideBarHeader {
   display: none;
   @include adaptive("xsm"){
     display: flex;
@@ -323,7 +323,9 @@ header .contentContainer {
   min-height: 100vh;
   overflow-y:scroll;
   position: fixed;
-  top:-100%;
+  .searchBarHeader {
+    display: flex;
+  }
   .inputWrapper {
     margin-top: 25px;
   }

@@ -374,11 +374,11 @@ header .contentContainer {
   border-top: 1px solid #E0E1E2;
 }
 
-.sideBar .sideBarHeader, .searchModal .searchBarHeader {
+.sideBar .sideBarHeader {
   display: none;
 }
 @media only screen and (max-width: 769px) {
-  .sideBar .sideBarHeader, .searchModal .searchBarHeader {
+  .sideBar .sideBarHeader {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -397,7 +397,11 @@ header .contentContainer {
   min-height: 100vh;
   overflow-y: scroll;
   position: fixed;
-  top: -100%;
+}
+.searchModal .searchBarHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .searchModal .inputWrapper {
   margin-top: 25px;
