@@ -318,11 +318,14 @@ header .contentContainer {
 
 .searchModal {
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   overflow-y:scroll;
   position: fixed;
+  @include adaptive("xsm"){
+    display: flex;
+  }
   .searchBarHeader {
     display: flex;
   }
