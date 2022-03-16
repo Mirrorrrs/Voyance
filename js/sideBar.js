@@ -20,16 +20,18 @@ searchInput.onblur = ()=>{
     searchResults.classList.remove("visible")
     enableScroll()
 }
+if (searchInput){
+    searchInput.oninput = (ev)=>{
+        const val = ev.target.value
+        if (val.trim().length > 3){
+            searchResults.classList.add("visible")
+        }else{
+            searchResults.classList.remove("visible")
 
-searchInput.oninput = (ev)=>{
-    const val = ev.target.value
-    if (val.trim().length > 3){
-        searchResults.classList.add("visible")
-    }else{
-        searchResults.classList.remove("visible")
-
+        }
     }
 }
+
 
 menuButton.each((num,el)=>{
     el.onclick = ()=>{

@@ -1,0 +1,121 @@
+@import "mixins";
+
+.commentsWrap {
+  @include adaptive("xxsm"){
+    background: white !important;
+  }
+}
+
+.comments {
+  margin-top: 0;
+  .customButton.singleButton {
+    margin-top: 30px;
+  }
+  .commentsWrapper {
+    margin-top: 10px !important;
+
+  }
+  .profileInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include adaptive("xxsm"){
+      justify-content: center;
+    }
+    .userInfo {
+      display: flex;
+      align-items: center;
+      @include adaptive("xxsm"){
+        display: none;
+      }
+      .text {
+        margin-left: 22px;
+        h5 {
+          font-weight: 700;
+          font-size: 18px;
+          color: #2D3748
+        }
+
+        p{
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 140%;
+
+          color: #3A9B7A;
+        }
+
+      }
+      .imageWrapper {
+        .profile {
+          border-radius: 12px!important;
+
+        }
+      }
+    }
+    .rating {
+      display: flex;
+      align-items: center;
+      .break {
+        border-left: 1px solid #EDEDED;
+        flex-shrink: 1;
+        background: #EDEDED ;
+        margin: 0 11px 0 22px;
+      }
+      .text {
+        text-align: center;
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 18px;
+          letter-spacing: 0.5px;
+          color: #0C1A30;
+          span {
+            font-size: 30px;
+            font-weight: 700;
+          }
+          &:last-child {
+            margin-top: 5px;
+          }
+        }
+      }
+      .rates {
+        .rate {
+          display: flex;
+          align-items: center;
+          .line {
+            width: 100px;
+            background: #EDEDED;
+            height: 4px;
+            border-radius: 15px;
+            margin-left: 11px;
+            position: relative;
+            overflow: hidden;
+            span {
+              display: block;
+              top: 0;
+              left: 0;
+              height: 100%;
+              width: 20%;
+              background: #FFC120;
+              border-radius: 15px;
+
+            }
+
+          }
+          p {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: right;
+            letter-spacing: 0.2px;
+            color: #0C1A30;
+            margin-left: 11px;
+          }
+          .stars {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}

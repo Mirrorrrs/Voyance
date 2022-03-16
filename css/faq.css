@@ -37,33 +37,3 @@
   padding-bottom: 0;
   border: 0;
 }
-.faqWrapper .types {
-  margin-top: 20px;
-  margin-left: -10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-.faqWrapper .types .type {
-  margin-top: 20px;
-}
-.faqWrapper .types .type input {
-  display: none;
-}
-.faqWrapper .types .type .content {
-  cursor: pointer;
-  padding: 5px 20px;
-  border-radius: 10px;
-  border: 1px solid #EDEDED;
-  font-weight: 500;
-  font-size: 14px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  margin-left: 10px;
-}
-.faqWrapper .types .type input:checked + .content {
-  color: #3669C9;
-  background: #EFF5FB;
-}

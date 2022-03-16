@@ -37,32 +37,4 @@
       border: 0;
     }
   }
-  .types {
-    margin-top: 20px;
-    margin-left: -10px;
-    display: flex;
-    flex-wrap: wrap;
-    .type {
-      input {
-        display: none;
-      }
-      margin-top: 20px;
-
-      .content {
-
-        cursor: pointer;
-        padding: 5px 20px;
-        border-radius: 10px;
-        border: 1px solid #EDEDED;
-        font-weight: 500;
-        font-size: 14px;
-        transition:.2s;
-        margin-left: 10px;
-      }
-      input:checked + .content {
-        color:#3669C9;
-        background: #EFF5FB;
-      }
-    }
-  }
 }
