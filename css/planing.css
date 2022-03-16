@@ -1,0 +1,13 @@
+.table.block {
+  margin-top: 0 !important;
+}
+.table.block #table {
+  margin-top: 0;
+}
+.table.block .tableContainer {
+  height: auto;
+  overflow: auto;
+}
+.table.block .inputWrapper {
+  margin-top: 30px;
+}

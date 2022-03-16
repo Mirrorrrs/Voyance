@@ -1,0 +1,135 @@
+@media only screen and (max-width: 415px) {
+  .commentsWrap {
+    background: white !important;
+  }
+}
+
+.comments {
+  margin-top: 0;
+}
+.comments .customButton.singleButton {
+  margin-top: 30px;
+}
+.comments .commentsWrapper {
+  margin-top: 10px !important;
+}
+.comments .profileInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media only screen and (max-width: 415px) {
+  .comments .profileInfo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.comments .profileInfo .userInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media only screen and (max-width: 415px) {
+  .comments .profileInfo .userInfo {
+    display: none;
+  }
+}
+.comments .profileInfo .userInfo .text {
+  margin-left: 22px;
+}
+.comments .profileInfo .userInfo .text h5 {
+  font-weight: 700;
+  font-size: 18px;
+  color: #2D3748;
+}
+.comments .profileInfo .userInfo .text p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  color: #3A9B7A;
+}
+.comments .profileInfo .userInfo .imageWrapper .profile {
+  border-radius: 12px !important;
+}
+.comments .profileInfo .rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.comments .profileInfo .rating .break {
+  border-left: 1px solid #EDEDED;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  background: #EDEDED;
+  margin: 0 11px 0 22px;
+}
+.comments .profileInfo .rating .text {
+  text-align: center;
+}
+.comments .profileInfo .rating .text p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  color: #0C1A30;
+}
+.comments .profileInfo .rating .text p span {
+  font-size: 30px;
+  font-weight: 700;
+}
+.comments .profileInfo .rating .text p:last-child {
+  margin-top: 5px;
+}
+.comments .profileInfo .rating .rates .rate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.comments .profileInfo .rating .rates .rate .line {
+  width: 100px;
+  background: #EDEDED;
+  height: 4px;
+  border-radius: 15px;
+  margin-left: 11px;
+  position: relative;
+  overflow: hidden;
+}
+.comments .profileInfo .rating .rates .rate .line span {
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20%;
+  background: #FFC120;
+  border-radius: 15px;
+}
+.comments .profileInfo .rating .rates .rate p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: 0.2px;
+  color: #0C1A30;
+  margin-left: 11px;
+}
+.comments .profileInfo .rating .rates .rate .stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
