@@ -126,6 +126,7 @@ li {
           flex-direction: column;
   min-height: calc(100vh - 100px);
   min-width: 0;
+  padding-bottom: 100px;
 }
 @media only screen and (max-width: 769px) {
   .contentWrapper .contentContainer {
@@ -1359,4 +1360,56 @@ li {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.bottomNavigation {
+  display: none;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  bottom: 0;
+  padding: 12px 0;
+  background: white;
+}
+.bottomNavigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10px;
+}
+.bottomNavigation ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.bottomNavigation ul li p {
+  font-weight: 500;
+  font-size: 8px;
+  color: black;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+.bottomNavigation ul li svg path {
+  stroke: black;
+}
+.bottomNavigation ul li.active svg path {
+  stroke: #3669C9;
+}
+.bottomNavigation ul li.active p {
+  color: #3669C9;
+}
+@media only screen and (max-width: 769px) {
+  .bottomNavigation {
+    display: block;
+  }
 }

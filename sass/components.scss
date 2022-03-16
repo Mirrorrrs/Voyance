@@ -99,7 +99,7 @@ li {
   flex-direction: column;
   min-height: calc(100vh - 100px);
   min-width: 0;
-
+  padding-bottom: 100px;
   @include adaptive("xsm"){
     min-height: calc(100vh - 70px);
   }
@@ -1155,5 +1155,54 @@ li {
         }
       }
     }
+  }
+}
+
+.bottomNavigation {
+  display: none;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  bottom: 0;
+  padding: 12px 0;
+  background: white;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        font-weight: 500;
+        font-size: 8px;
+        color: black;
+        margin-top: 5px;
+        text-transform: uppercase;
+      }
+      svg {
+        path {
+          stroke: black;
+
+        }
+      }
+      &.active {
+        svg {
+          path {
+            stroke: #3669C9;
+
+          }
+        }
+
+        p {
+          color: #3669C9;
+        }
+      }
+    }
+  }
+  @include adaptive("xsm"){
+    display: block;
+
   }
 }

@@ -8,13 +8,13 @@ header, .sideBarHeader, .searchBarHeader {
       -ms-flex-align: center;
           align-items: center;
 }
-header .burgerMenu, header .searchButton, header .backButton, .sideBarHeader .burgerMenu, .sideBarHeader .searchButton, .sideBarHeader .backButton, .searchBarHeader .burgerMenu, .searchBarHeader .searchButton, .searchBarHeader .backButton {
+header .burgerMenu, header .searchButton, .sideBarHeader .burgerMenu, .sideBarHeader .searchButton, .searchBarHeader .burgerMenu, .searchBarHeader .searchButton {
   display: none;
   width: 18px;
   height: 14px;
 }
 @media only screen and (max-width: 769px) {
-  header .burgerMenu img, header .searchButton img, header .backButton img, .sideBarHeader .burgerMenu img, .sideBarHeader .searchButton img, .sideBarHeader .backButton img, .searchBarHeader .burgerMenu img, .searchBarHeader .searchButton img, .searchBarHeader .backButton img {
+  header .burgerMenu img, header .searchButton img, .sideBarHeader .burgerMenu img, .sideBarHeader .searchButton img, .searchBarHeader .burgerMenu img, .searchBarHeader .searchButton img {
     display: block;
     width: 100%;
     height: 100%;
