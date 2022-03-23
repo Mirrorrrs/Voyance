@@ -9,7 +9,7 @@ const commentModal = $('.commentModal')[0]
 openSearchModal.each((num,el)=>{
     el.onclick = ()=>{
         searchModal.classList.add("visible")
-        document.body.classList.add("wrap")
+
     }
 })
 
@@ -31,7 +31,6 @@ closeCommentModal.each((num,el)=>{
 closeSearchModal.each((num,el)=>{
     el.onclick = ()=>{
         searchModal.classList.remove("visible")
-        document.body.classList.remove("wrap")
     }
 })
 

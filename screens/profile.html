@@ -20,52 +20,52 @@
     <script src="../js/buttons.js" defer></script>
 </head>
 <body>
+<div class="cookieModal modal">
+    <div class="header">
+        <div class="headerWrapper">
+            <h5>Réglages RGPD: gestion des cookies</h5>
+        </div>
+    </div>
+    <div class="sections">
+        <section>
+            <h6>Analytics</h6>
+            <p>Les cookies Analytics, provenant du tiers Google, ont pour finalité de recueillir des statistiques de visites anonymes. Ces données une fois recoupées, pourraient être intrusives pour la vie privée des utilisateurs du site</p>
+            <button class="customButton">En savoir plus</button>
+        </section>
+        <section>
+            <h6>Analytics</h6>
+            <p>Les cookies Analytics, provenant du tiers Google, ont pour finalité de recueillir des statistiques de visites anonymes. Ces données une fois recoupées, pourraient être intrusives pour la vie privée des utilisateurs du site</p>
+            <button class="customButton">En savoir plus</button>
+        </section>
+        <div class="buttons">
+            <div class="customButton white">En savoir plus</div>
+            <div class="customButton">En savoir plus</div>
+        </div>
+    </div>
+</div>
+<div class="commentModal modal paddingContainer">
+    <form action="" >
+        <div class="controls closeCommentModal">
+            <img src="../assets/icons/Cross.svg" alt="">
+        </div>
+        <h5>Veuillez remplir le formulaire</h5>
+        <div class="inputWrapper">
+            <span>Votre nom</span>
+            <input type="text" placeholder="Saisissez votre nom">
+        </div>
+        <div class="inputWrapper">
+            <span>Votre nom</span>
+            <input type="text" placeholder="Saisissez votre nom">
+        </div>
+        <div class="inputWrapper">
+            <span>Votre nom</span>
+            <input type="text" placeholder="Saisissez votre nom">
+        </div>
+        <button disabled class="customButton">Envoyer</button>
+    </form>
+</div>
 <div class="viewWrapper">
     <div class="blur"></div>
-    <div class="cookieModal modal">
-        <div class="header">
-            <div class="headerWrapper">
-                <h5>Réglages RGPD: gestion des cookies</h5>
-            </div>
-        </div>
-        <div class="sections">
-            <section>
-                <h6>Analytics</h6>
-                <p>Les cookies Analytics, provenant du tiers Google, ont pour finalité de recueillir des statistiques de visites anonymes. Ces données une fois recoupées, pourraient être intrusives pour la vie privée des utilisateurs du site</p>
-                <button class="customButton">En savoir plus</button>
-            </section>
-            <section>
-                <h6>Analytics</h6>
-                <p>Les cookies Analytics, provenant du tiers Google, ont pour finalité de recueillir des statistiques de visites anonymes. Ces données une fois recoupées, pourraient être intrusives pour la vie privée des utilisateurs du site</p>
-                <button class="customButton">En savoir plus</button>
-            </section>
-            <div class="buttons">
-                <div class="customButton white">En savoir plus</div>
-                <div class="customButton">En savoir plus</div>
-            </div>
-        </div>
-    </div>
-    <div class="commentModal modal paddingContainer">
-        <form action="" >
-            <div class="controls closeCommentModal">
-                <img src="../assets/icons/Cross.svg" alt="">
-            </div>
-            <h5>Veuillez remplir le formulaire</h5>
-            <div class="inputWrapper">
-                <span>Votre nom</span>
-                <input type="text" placeholder="Saisissez votre nom">
-            </div>
-            <div class="inputWrapper">
-                <span>Votre nom</span>
-                <input type="text" placeholder="Saisissez votre nom">
-            </div>
-            <div class="inputWrapper">
-                <span>Votre nom</span>
-                <input type="text" placeholder="Saisissez votre nom">
-            </div>
-            <button disabled class="customButton">Envoyer</button>
-        </form>
-    </div>
     <div class="container">
         <header class="paddingContainer">
             <button class="backButton"><img src="../assets/icons/Arrow.svg" alt=""></button>
@@ -374,7 +374,7 @@
                                             <p>En consultation: 00:05:10</p>
                                         </div>
                                         <div class="buttons">
-                                            <button><img src="../assets/icons/VolumeUpBlack.svg" alt=""></button>
+                                            <button class="playButton active"><img src="../assets/icons/VolumeUpBlack.svg" alt=""><img src="../assets/icons/VolumeOff.svg" alt=""></button>
                                             <button><img src="../assets/icons/Heart.svg" alt=""><span>Ajouter aux favoris</span></button>
                                         </div>
                                     </div>

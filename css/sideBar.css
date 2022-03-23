@@ -32,6 +32,7 @@ header .searchButton, .sideBarHeader .searchButton, .searchBarHeader .searchButt
 header .backButton, .sideBarHeader .backButton, .searchBarHeader .backButton {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  display: none;
 }
 @media only screen and (max-width: 415px) {
   header .backButton, .sideBarHeader .backButton, .searchBarHeader .backButton {
@@ -105,6 +106,14 @@ header .contentContainer {
 .navigationDisplay .link {
   font-weight: normal;
   font-size: 12px;
+}
+
+.navigationDisplay .link span {
+  cursor: pointer;
+}
+
+.navigationDisplay .link span:hover {
+  text-decoration: underline;
 }
 
 .navigationDisplay .page {
@@ -244,8 +253,8 @@ header .contentContainer {
   transition: 0.2s;
   cursor: pointer;
 }
-.searchBar .searchResults .result:hover {
-  opacity: 0.8;
+.searchBar .searchResults .result .text p:hover {
+  text-decoration: underline;
 }
 
 .searchBar .searchResults .result:last-child {
@@ -350,6 +359,14 @@ header .contentContainer {
 .sideBar {
   max-width: 220px;
   width: 100%;
+}
+
+.sideBar nav ul li:hover .title {
+  color:#0C1A30;
+}
+
+.sideBar .dropdownMenu li:hover {
+  color: #3669C9;
 }
 
 @media only screen and (max-width: 769px) {

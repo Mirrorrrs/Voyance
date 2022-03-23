@@ -214,9 +214,31 @@
   transition: 0.2s;
 }
 .profileHeader .userInfo .stats .buttons button:hover {
-  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.17);
-          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0px 3.5px 8px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 3.5px 8px rgba(0, 0, 0, 0.08);
 }
+
+.profileHeader .userInfo .stats .buttons button.playButton {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileHeader .userInfo .stats .buttons button.playButton img:nth-child(2){
+  display: none;
+}
+
+.profileHeader .userInfo .stats .buttons button.playButton.active img:nth-child(1){
+  display: none;
+}
+
+.profileHeader .userInfo .stats .buttons button.playButton.active img:nth-child(2){
+  display: block;
+}
+
+
 .profileHeader .userInfo .stats .buttons button span {
   font-weight: bold;
   font-size: 10px;

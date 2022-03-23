@@ -43,7 +43,8 @@ li {
 }
 
 .slick-slider {
-  overflow: hidden;
+  overflow-x: hidden;
+
 }
 
 @media only screen and (max-width: 769px) {
@@ -89,6 +90,11 @@ li {
   font-weight: 500;
   font-size: 12px;
   color: #3669C9;
+  cursor: pointer;
+}
+
+.block .header .controls span:hover {
+  text-decoration: underline;
 }
 
 .circledIcon {
@@ -126,11 +132,12 @@ li {
           flex-direction: column;
   min-height: calc(100vh - 100px);
   min-width: 0;
-  padding-bottom: 100px;
 }
 @media only screen and (max-width: 769px) {
   .contentWrapper .contentContainer {
     min-height: calc(100vh - 70px);
+    padding-bottom: 100px;
+
   }
 }
 @media only screen and (max-width: 415px) {
@@ -167,9 +174,13 @@ li {
   transition: 0.2s;
 }
 .customButton:hover {
-  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  opacity: 0.8;
 }
+
+.customButton.white:hover {
+  filter: brightness(95%);
+}
+
 .customButton:disabled {
   color: white;
   background: #C4C5C4;
@@ -206,10 +217,15 @@ li {
   min-height: 258px;
   padding: 15px 19px;
   background: white;
-  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   margin-left: 15px;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.specialistCard:hover {
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
 }
 @media only screen and (max-width: 769px) {
   .specialistCard {
@@ -225,18 +241,14 @@ li {
 .specialistCard .buttons button {
   margin-left: 10px;
   background: #3669C9;
+  transition: .2s;
 }
 .specialistCard .buttons button:hover {
-  -webkit-box-shadow: 0px 0px 8px rgba(54, 105, 201, 0.5);
-          box-shadow: 0px 0px 8px rgba(54, 105, 201, 0.5);
+  opacity: 0.8;
 }
 
 .specialistCard.green .buttons button {
   background: #3A9B7A;
-}
-.specialistCard.green .buttons button:hover {
-  -webkit-box-shadow: 0px 0px 8px rgba(58, 155, 122, 0.5);
-          box-shadow: 0px 0px 8px rgba(58, 155, 122, 0.5);
 }
 
 .specialistCard .buttons button.circledIcon {
@@ -497,10 +509,10 @@ li {
 .modal.visible {
   display: block;
 }
-.modal.visible + .viewWrapper {
+.modal.visible ~ .viewWrapper {
   overflow: hidden;
 }
-.modal.visible + .viewWrapper .blur {
+.modal.visible ~ .viewWrapper .blur {
   opacity: 1;
   z-index: 200;
 }
@@ -689,7 +701,7 @@ li {
   transition: 0.2s;
 }
 .questions .question:hover {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #06070C;
 }
 
 .questions .question button {
@@ -907,7 +919,9 @@ li {
 }
 
 .specialistsSlider .slick-list {
-  overflow: hidden;
+  overflow-x: hidden;
+  padding-top:5px;
+  padding-bottom: 5px;
 }
 
 .specialistsSlider .slick-arrow {
@@ -1225,6 +1239,13 @@ li {
   transition: 0.2s;
   margin-left: 10px;
 }
+
+.types .type .content:hover {
+  border: 1px solid #3669C9;
+  color: #3669C9;
+
+}
+
 .types .type input:checked + .content {
   color: #3669C9;
   background: #EFF5FB;
