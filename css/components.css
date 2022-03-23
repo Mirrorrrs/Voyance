@@ -1039,26 +1039,60 @@ li {
   color: #0C1A30;
   margin-bottom: 20px;
 }
+
+.inputWrapper .errorMessage {
+  display: none;
+  color: #FE3A30;
+  margin-top: 7px;
+}
+
 .inputWrapper input, .inputWrapper textarea {
   background: #FAFAFA;
   padding: 16px 20px;
   border-radius: 12px;
+
 }
+
+.inputWrapper.error input, .inputWrapper.error textarea {
+ border: 1px solid #FE3A30;
+}
+
+.inputWrapper.error .errorMessage {display: block}
+
 .inputWrapper input::-webkit-input-placeholder, .inputWrapper textarea::-webkit-input-placeholder {
   color: #C4C5C4;
+  transition: .2s;
 }
 .inputWrapper input::-moz-placeholder, .inputWrapper textarea::-moz-placeholder {
   color: #C4C5C4;
+  transition: .2s;
 }
 .inputWrapper input:-ms-input-placeholder, .inputWrapper textarea:-ms-input-placeholder {
   color: #C4C5C4;
+  transition: .2s;
 }
 .inputWrapper input::-ms-input-placeholder, .inputWrapper textarea::-ms-input-placeholder {
   color: #C4C5C4;
+  transition: .2s;
 }
 .inputWrapper input::placeholder, .inputWrapper textarea::placeholder {
   color: #C4C5C4;
+  transition: .2s;
 }
+
+.inputWrapper input:hover::-moz-placeholder, .inputWrapper textarea:hover::-moz-placeholder {
+  color: #0C1A30;
+}
+.inputWrapper input:hover:-ms-input-placeholder, .inputWrapper textarea:hover:-ms-input-placeholder {
+  color: #0C1A30;
+}
+.inputWrapper input:hover::-ms-input-placeholder, .inputWrapper textarea:hover::-ms-input-placeholder {
+  color: #0C1A30;
+}
+.inputWrapper input:hover::placeholder, .inputWrapper textarea:hover::placeholder {
+  color: #0C1A30;
+}
+
 .inputWrapper textarea {
   resize: none;
   height: 130px;
