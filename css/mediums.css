@@ -82,3 +82,10 @@
 .infoIcons .infoIcon .imageWrapper.red {
   border: 1px solid #FE3A30;
 }
+
+.filterToggler {
+  position: sticky;
+  bottom: 100px;
+  z-index: 100;
+  margin-top: 40px;
+}

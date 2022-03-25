@@ -1,4 +1,3 @@
-const filterBtn = $(".filters > .customButton")[0]
 const filterModal = $(".filterModal")[0]
 const filterTypes = $(".filterTypeSelect span")
 let offsetFirst = {}
@@ -9,7 +8,7 @@ const closeModal = $(".filterModal .controls")[0]
 const typeSlider = $(".filterTypeSelect > .selectSlider")
 let selectedFilter = 1
 
-filterBtn.onclick = ()=>{
+function openFilters(){
     filterModal.classList.add("visible")
     viewWrapper.classList.add("blured")
     offsetFirst = getChildPosition(filterTypes[0])
@@ -19,6 +18,7 @@ filterBtn.onclick = ()=>{
     disableScroll()
     renderSlider()
 }
+
 
 closeModal.onclick = ()=>{
     filterModal.classList.remove("visible")

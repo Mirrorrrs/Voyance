@@ -4,6 +4,8 @@
   }
 }
 
+
+
 .comments {
   margin-top: 0;
 }
@@ -29,6 +31,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 20px;
   }
 }
 .comments .profileInfo .userInfo {
@@ -132,4 +135,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.floatingBtn {
+  position: sticky;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
 }

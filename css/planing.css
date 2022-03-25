@@ -11,3 +11,13 @@
 .table.block .inputWrapper {
   margin-top: 30px;
 }
+
+.inputWrapper input {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 416px){
+  .inputWrapper {
+    padding-right: 20px;
+  }
+}

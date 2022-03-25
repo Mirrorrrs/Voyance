@@ -21,11 +21,25 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  align-items: center;
 }
 .tWrap .expandTableBtn button {
   color: #3669C9;
   font-weight: 500;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.tWrap .expandTableBtn button svg {
+  transform: rotate(90deg);
+  margin-left: 7px;
+  transition: .2s;
+}
+
+.tWrap .expandTableBtn.active button svg {
+  transform: rotate(-90deg);
+  margin-left: 7px;
 }
 
 .hiddenHeader {
@@ -139,5 +153,11 @@ table td .sign {
 @media only screen and (max-width: 769px) {
   table th, main table td {
     min-width: 60px;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .table {
+    width: 100vw;
   }
 }

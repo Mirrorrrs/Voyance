@@ -34,7 +34,7 @@ header .backButton, .sideBarHeader .backButton, .searchBarHeader .backButton {
           transform: rotate(180deg);
   display: none;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 769px) {
   header .backButton, .sideBarHeader .backButton, .searchBarHeader .backButton {
     display: block;
   }
@@ -51,11 +51,16 @@ header .backButton, .sideBarHeader .backButton, .searchBarHeader .backButton {
         -ms-flex-pack: justify;
             justify-content: space-between;
     background: white;
+    padding-bottom: 22px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 10;
   }
 }
 @media only screen and (max-width: 415px) {
   header, .sideBarHeader, .searchBarHeader {
     background: white;
+
   }
 }
 
@@ -110,6 +115,10 @@ header .contentContainer {
 
 .navigationDisplay .link span {
   cursor: pointer;
+}
+
+.navigationDisplay .link span.inactive {
+  color: #A0AEC0;
 }
 
 .navigationDisplay .link span:hover {
@@ -361,6 +370,14 @@ header .contentContainer {
   width: 100%;
 }
 
+.sideBar nav ul li.current {
+  background: white;
+}
+
+.sideBar nav ul li.current .title {
+  color:#0C1A30;
+}
+
 .sideBar nav ul li:hover .title {
   color:#0C1A30;
 }
@@ -369,27 +386,51 @@ header .contentContainer {
   color: #3669C9;
 }
 
+.sideBar .dropdownMenu.active {
+  box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+}
+
 @media only screen and (max-width: 769px) {
   .sideBar, .searchModal {
     position: fixed;
     background: white;
     max-width: 100vw;
     height: 100vh;
-    top: -100vh;
-    left: 0;
+    top: 0;
     z-index: 1000;
     -webkit-transition: 0.2s;
     transition: 0.2s;
   }
+
+  .sideBar {
+    left: -101vw;
+    z-index: 1000;
+  }
+
+  .sideBar .sideBarHeader .burgerMenu {
+    transform: rotate(45deg);
+    width: 16px;
+    height: 16px;
+  }
+
+  .searchModal {
+    right: -101vw;
+    z-index: 1001;
+  }
 }
 
-.sideBar.visible, .searchModal.visible {
-  top: 0;
+.sideBar.visible{
+  left: 0;
+}
+
+.searchModal.visible {
+  right: 0;
 }
 
 .sideBar nav {
   border-top: 1px solid #E0E1E2;
 }
+
 
 .sideBar .sideBarHeader {
   display: none;
@@ -400,6 +441,11 @@ header .contentContainer {
     display: -ms-flexbox;
     display: flex;
   }
+
+  .sideBar nav {
+    border-top: 0px solid #E0E1E2;
+  }
+
 }
 
 .searchModal {
@@ -623,8 +669,12 @@ header .contentContainer {
 }
 
 .sideBar nav li {
-  padding: 12px 16px 18px 16px;
+  padding: 12px 16px 12px 16px;
   border-radius: 15px;
+}
+
+.sideBar nav li.active {
+  padding: 12px 16px 18px 16px;
 }
 @media only screen and (max-width: 769px) {
   .sideBar nav li {

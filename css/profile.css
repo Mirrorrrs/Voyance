@@ -224,6 +224,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: .2s;
+}
+
+.profileHeader .userInfo .stats .buttons button.likeButton svg{
+  stroke:black;
+  transition: .2s;
+}
+
+.profileHeader .userInfo .stats .buttons button.likeButton.active svg{
+  fill: #FE3A30;
+  stroke:none;
 }
 
 .profileHeader .userInfo .stats .buttons button.playButton img:nth-child(2){
@@ -297,8 +308,15 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 0 40px !important;
+    padding: 0 103px !important;
     margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 417px) {
+  .descriptions {
+
+    padding: 0 25px !important;
   }
 }
 .descriptions .descWrapper {
@@ -448,6 +466,20 @@
   .descriptions .description {
     margin-left: 0;
   }
+
+  .descriptions .descWrapper .description:nth-child(2) .content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .descriptions .descWrapper .description:nth-child(2) .content .card{
+    margin-top: 20px;
+  }
+
+
 }
 @media only screen and (max-width: 415px) {
   .descriptions .description {
@@ -456,6 +488,17 @@
     border-radius: 0;
     margin-top: 30px;
     border-bottom: 1px solid #EDEDED;
+  }
+
+  .descriptions .descWrapper .description:nth-child(2) .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .descriptions .descWrapper .description:nth-child(2) .content .card{
+    margin-top: 20px;
   }
 }
 
@@ -491,6 +534,8 @@
 .mobileHeader .info .name .circledIcon {
   background: #3669C9;
 }
+
+
 .mobileHeader .info .stats {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -538,6 +583,19 @@
 @media only screen and (max-width: 415px) {
   .mobileHeader .iconWrapper {
     margin-top: -60px;
+  }
+
+  .mobileHeader .info .stats {
+    flex-wrap: wrap;
+
+  }
+
+  .mobileHeader .info .stats .statsWrap {
+    flex-wrap: wrap;
+  }
+
+  .mobileHeader .info .stats .stat {
+    margin-top: 5px;
   }
 }
 .mobileHeader .iconWrapper .icon {

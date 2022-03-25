@@ -174,11 +174,13 @@ li {
   transition: 0.2s;
 }
 .customButton:hover {
-  opacity: 0.8;
+  background: #5687E3;
+  box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
 }
 
 .customButton.white:hover {
-  filter: brightness(95%);
+  background: #F0F0F0;
+  box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
 }
 
 .customButton:disabled {
@@ -221,6 +223,7 @@ li {
   border-radius: 10px;
   margin-left: 15px;
   transition: .2s;
+  outline: none;
   cursor: pointer;
 }
 
@@ -244,7 +247,13 @@ li {
   transition: .2s;
 }
 .specialistCard .buttons button:hover {
-  opacity: 0.8;
+  background: #5687E3;
+  box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
+}
+
+.specialistCard.green .buttons button:hover {
+  background: #50B592;
+  box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
 }
 
 .specialistCard.green .buttons button {
@@ -329,6 +338,16 @@ li {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.specialistCard .imageWrapper .profile {
+  border: 2px solid #5687E3;
+
+}
+
+.specialistCard.green .imageWrapper .profile {
+  border: 2px solid #3A9B7A;
+
 }
 
 .imageWrapper .country {
@@ -798,7 +817,7 @@ li {
 }
 @media only screen and (max-width: 415px) {
   .filterModal {
-    bottom: 35px;
+    bottom: 85px;
     top: auto;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
@@ -920,8 +939,8 @@ li {
 
 .specialistsSlider .slick-list {
   overflow-x: hidden;
-  padding-top:5px;
-  padding-bottom: 5px;
+  padding-top:7px;
+  padding-bottom: 7px;
 }
 
 .specialistsSlider .slick-arrow {
@@ -979,6 +998,25 @@ li {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.commentModal .mark {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.commentModal .markStars {
+  display: flex;
+  margin-left: 7px;
+
+}
+
+.commentModal .star {
+  width: 22px;
+  height: 22px;
+  margin-left: 12px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 415px) {
   .commentModal {
@@ -1253,9 +1291,15 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  width: 100%;
+  overflow-x: scroll;
+
 }
+
+.types::-webkit-scrollbar {
+  display: none;
+}
+
 .types .type {
   margin-top: 20px;
 }

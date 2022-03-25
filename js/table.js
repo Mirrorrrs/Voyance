@@ -30,9 +30,11 @@ if (expandBtn){
     expandBtn.onclick = ()=>{
         if (!tableWrapper.classList.contains("opened")){
             tableWrapper.classList.add("opened")
+            expandBtn.classList.add("active")
             tableWrapper.style.height = table.getBoundingClientRect().height-tableHeaderHeight + "px"
         }else{
             tableWrapper.classList.remove("opened")
+            expandBtn.classList.remove("active")
             tableWrapper.style.height = "440px"
         }
     }

@@ -128,11 +128,12 @@
         </ul>
     </nav>
 </div>
+
 <div class="viewWrapper">
     <div class="blur"></div>
     <div class="searchModal">
         <div class="searchBarHeader paddingContainer">
-            <button class="backButton closeSearchModal"><img src="assets/icons/Arrow.svg" alt=""></button>
+            <button class="backButton closeSearchModal" onclick="closeSearchModal()"><img src="assets/icons/Arrow.svg" alt=""></button>
             <div class="logo">
                 <h5>Recherche</h5>
             </div>
@@ -668,10 +669,10 @@
             <div class="logo">
                 <img src="assets/icons/Logo.svg" alt="">
             </div>
-            <button class="searchButton openSearchModal"><img src="assets/icons/Search.svg" alt=""></button>
+            <button class="searchButton" onclick="openSearchModal()"><img src="assets/icons/Search.svg" alt=""></button>
             <div class="contentContainer">
                 <div class="navigationDisplay">
-                    <p class="link"><span>Voyance</span> / <span>Accueil</span></p>
+                    <p class="link"><span class="inactive">Voyance</span> / <span>Accueil</span></p>
                     <p class="page">Accueil</p>
                 </div>
                 <div class="searchAndFilters">
@@ -807,16 +808,16 @@
         <div class="contentWrapper">
             <div class="sideBar">
                 <div class="sideBarHeader paddingContainer">
-                        <button class="burgerMenu"><img src="assets/icons/Burger.svg" alt=""></button>
+                        <button class="burgerMenu"><img src="assets/icons/Cross.svg" alt=""></button>
                         <div class="logo">
                             <img src="assets/icons/Logo.svg" alt="">
                         </div>
-                        <button class="searchButton"><img src="assets/icons/Search.svg" alt=""></button>
+                        <button class="searchButton" onclick="openSearchModal()"><img src="assets/icons/Search.svg" alt=""></button>
 
                 </div>
                 <nav>
                     <ul class="paddingContainer">
-                        <li class="dropdownMenu">
+                        <li class="dropdownMenu current">
                             <div class="content">
                                 <div class="name">
                                     <div class="icon">
