@@ -51,6 +51,9 @@
   margin-left: 25px;
 }
 @media only screen and (max-width: 769px) {
+  .infoIcons {
+    margin-left: 0;
+  }
   .infoIcons .infoIcon:first-child {
     margin-left: 0;
   }
@@ -81,6 +84,10 @@
 
 .infoIcons .infoIcon .imageWrapper.red {
   border: 1px solid #FE3A30;
+}
+
+.infoIcons .infoIcon .imageWrapper.green {
+  border: 1px solid green;
 }
 
 .filterToggler {

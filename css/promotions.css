@@ -1,0 +1,82 @@
+.gratuits .gratuit input {
+    display: none;
+}
+
+.gratuits {
+    display: flex;
+    margin-left: -40px;
+    width: 100%;
+    overflow-x:scroll ;
+}
+
+@media screen and (max-width: 769px){
+    .gratuitsFilter {
+        padding: 0 0 0 32px ;
+    }
+    .gratuits {
+        margin: 0;
+    }
+
+    .gratuits .gratuit:nth-child(1){
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 415px){
+    .gratuitsFilter {
+        padding: 0 0 0 25px ;
+    }
+}
+
+.gratuits .gratuit {
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.gratuits .gratuit .content {
+    display: block;
+}
+
+.gratuits .gratuit .title {
+    display: flex;
+    align-items: center;
+}
+
+.gratuits .gratuit .title p {
+    color: black;
+    font-size: 14px;
+}
+
+.gratuits .gratuit .title span {
+    background: red;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.gratuits .gratuit .date {
+    display: block;
+    font-size: 12px;
+    margin-top: 3px;
+    color: #838589;
+}
+
+.gratuits .gratuit .selector {
+    margin-top: 12px;
+    background: transparent;
+    width: 30px;
+    height: 5px;
+    border-radius: 20px ;
+    transition: .2s;
+}
+
+.gratuits .gratuit input:checked + .content .selector {
+    background: #3669C9;
+}
