@@ -4,10 +4,10 @@
   }
 }
 
-.contentContainer {
-  position: relative;
-  top: -60px;
-}
+/*.contentContainer {*/
+/*  position: relative;*/
+/*  top: -60px;*/
+/*}*/
 @media only screen and (max-width: 769px) {
   .contentContainer {
     top: 0;
@@ -27,6 +27,7 @@
   border-radius: 10px;
   padding: 23px;
   position: relative;
+  top: -60px;
 }
 @media only screen and (max-width: 769px) {
   .profileHeader {
@@ -300,7 +301,7 @@
   display: -ms-flexbox;
   display: flex;
   margin-left: -20px;
-  margin-top: 50px;
+  margin-top: -10px;
 }
 @media only screen and (max-width: 769px) {
   .descriptions {
@@ -534,6 +535,7 @@
 .mobileHeader .info .name .circledIcon {
   background: #3669C9;
 }
+
 
 
 .mobileHeader .info .stats {
