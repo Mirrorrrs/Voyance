@@ -153,18 +153,36 @@ header .contentContainer {
   margin-left: 30px;
 }
 
-.searchAndFilters .selectWrapper::after {
-  content: "";
-  width: 12px;
-  height: 6px;
-  display: block;
-  font-size: 1rem;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 20px;
+.searchAndFilters .selectWrapper{
+  position: relative;
+}
+
+.searchAndFilters .selectWrapper .customSelect {
+  padding: 10px 20px;
+  border-radius: 15px;
+  background: white;
+  width:200px;
+  border: 0.5px solid #E2E8F0;
+
+}
+
+.searchAndFilters .selectWrapper .customSelect p {
+  font-weight: 400;
+  font-size: 12px;
+  color: #A0AEC0;
+}
+
+.searchAndFilters .selectWrapper #filterDropDown, .searchAndFilters .selectWrapper #trierDropDown{
   position: absolute;
-  background: url("../assets/icons/SelectArrow.svg") center/contain no-repeat;
+  top: 50px;
+  right: 0;
+  min-width: 340px;
+}
+
+
+.searchAndFilters .selectWrapper #filterDropDown .filterOptions,
+.searchAndFilters .selectWrapper #trierDropDown .filterOptions {
+  margin-top: -20px;
 }
 
 .searchBar input, header .searchAndFilters select {

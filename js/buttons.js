@@ -2,6 +2,8 @@
 const searchMobileInput = $(".searchModal .inputWrapper input")[0]
 const searchModal = $('.searchModal')[0]
 const commentModal = $('.commentModal')[0]
+const filterDropDown = $("#filterDropDown")[0]
+const trierDropDown = $("#trierDropDown")[0]
 
 function openSearchModal(){
     searchModal.classList.add("visible")
@@ -30,4 +32,15 @@ searchMobileInput.oninput = (ev)=>{
         searchModal.classList.remove("resultsVisible")
 
     }
+}
+
+function toggleFilterDropdown(){
+    trierDropDown.classList.remove("visible")
+    filterDropDown.classList.toggle("visible")
+}
+
+function toggleTrierDropdown(){
+    filterDropDown.classList.remove("visible")
+
+    trierDropDown.classList.toggle("visible")
 }

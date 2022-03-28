@@ -890,13 +890,24 @@ li {
 
 .filterModal .filterOptions {
   margin-top: 30px;
+  display: none;
 }
+
+.filterModal.filter .filterOptions.filters {
+  display: block;
+}
+
+.filterModal.trier .filterOptions.triers {
+  display: block;
+}
+
 
 .filterModal .filterOptions input {
   display: none;
 }
 
 .filterModal .filterOptions > .option {
+  cursor: pointer;
   width: 100%;
   margin-top: 20px;
   padding-bottom: 20px;
@@ -922,11 +933,11 @@ li {
   color: #0C1A30;
 }
 
+
 .filterModal .filterOptions > .option .indicator {
   width: 20px;
   height: 20px;
   background: #3A9B7A;
-  border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -936,17 +947,39 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  opacity: 0;
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
 
-.filterModal .filterOptions input:checked + .option {
-  color: red !important;
+.filterModal .filterOptions.filters > .option .indicator {
+  border-radius: 25%;
+  border:1px solid #C4C5C4;
+  background: white;
 }
-.filterModal .filterOptions input:checked + .option .indicator {
+
+.filterModal .filterOptions.triers > .option .indicator {
+  border-radius: 50%;
+  opacity: 0;
+
+}
+
+
+
+.filterModal .filterOptions .option .content {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+
+.filterModal .filterOptions .option input:checked + .content .indicator {
   opacity: 1;
 }
+
+.filterModal .filterOptions.filters .option input:checked + .content .indicator {
+  background: #3A9B7A;
+  border:1px solid #3A9B7A;
+}
+
 
 .filterModal .buttons {
   display: -webkit-box;

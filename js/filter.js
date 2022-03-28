@@ -20,7 +20,7 @@ function openFilters(){
 }
 
 
-closeModal.onclick = ()=>{
+function closeFilters(){
     filterModal.classList.remove("visible")
     viewWrapper.classList.remove("blured")
     enableScroll()
@@ -43,12 +43,17 @@ function renderSlider(){
                 left:offsetFirst.left + "px",
                 width:rectsFirst.width + "px"
             })
+            filterModal.classList.remove("trier")
+            filterModal.classList.add("filter")
+
             break
         case 2:
             typeSlider.css({
                 left:offsetSecond.left + "px",
                 width:rectsSecond.width + "px"
             })
+            filterModal.classList.remove("filter")
+            filterModal.classList.add("trier")
             break
         default:
             typeSlider.css({
