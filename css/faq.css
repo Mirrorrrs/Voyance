@@ -38,6 +38,8 @@
   border: 0;
 }
 
+
+
 .faqSubtitle {
   font-weight: 400;
   font-size: 14px;
@@ -50,4 +52,5 @@
   .faqSubtitle {
     display: block;
   }
+
 }

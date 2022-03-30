@@ -20,4 +20,7 @@
   .inputWrapper {
     padding-right: 20px;
   }
+  .inputWrapper img {
+    right: 35px !important;
+  }
 }
