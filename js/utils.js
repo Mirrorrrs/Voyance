@@ -49,3 +49,20 @@ function getChildPosition (element) {
         left: childPos.left - parentPos.left
     }
 }
+
+function scrollUp(){
+    window.scrollTo( {
+        top:0,
+        behavior: "smooth"
+    } );
+}
+
+window.addEventListener("scroll",(ev)=>{
+    if (pageYOffset>150){
+        !$(".scrollUpBtn").hasClass("visible") &&  $(".scrollUpBtn").addClass("visible")
+
+    }else{
+        $(".scrollUpBtn").hasClass("visible") &&  $(".scrollUpBtn").removeClass("visible")
+
+    }
+})

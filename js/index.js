@@ -18,6 +18,12 @@ if (slidesToShow <=4){
         slidesToShow: 1,
         slidesToScroll: 1,
     })
+}else{
+    $(".ads").slick({
+        infinite: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+    })
 }
 
 

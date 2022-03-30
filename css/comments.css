@@ -32,6 +32,12 @@
         -ms-flex-pack: center;
             justify-content: center;
     margin-top: 20px;
+    width: 100%;
+  }
+
+  .comments .profileInfo .rating {
+    width: 100% !important;
+    justify-content: space-between;
   }
 }
 .comments .profileInfo .userInfo {
@@ -139,7 +145,12 @@
 
 .floatingBtn {
   position: sticky;
-  bottom: 40px;
+  bottom: 100px;
   left: 0;
   width: 100%;
+}
+
+.vl {
+  margin-left: 22px;
+  margin-right: 11px;
 }

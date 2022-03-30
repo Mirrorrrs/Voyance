@@ -13,34 +13,6 @@
     overflow-x: scroll;
   }
 }
-.tWrap .expandTableBtn {
-  margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  align-items: center;
-}
-.tWrap .expandTableBtn button {
-  color: #3669C9;
-  font-weight: 500;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-}
-
-.tWrap .expandTableBtn button svg {
-  transform: rotate(90deg);
-  margin-left: 7px;
-  transition: .2s;
-}
-
-.tWrap .expandTableBtn.active button svg {
-  transform: rotate(-90deg);
-  margin-left: 7px;
-}
 
 .hiddenHeader {
   display: none;
@@ -81,6 +53,8 @@ table thead {
   position: relative;
   z-index: 10;
 }
+
+
 
 table thead th:first-child {
   position: sticky;
@@ -154,10 +128,35 @@ table td .sign {
   table th, main table td {
     min-width: 60px;
   }
+
+  table thead th {
+    background: #FAFAFA;
+  }
+}
+
+.table .title span {
+  font-weight: 700;
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 10px;
+  color: rgba(12, 26, 48, 0.3);
+}
+
+.table .header {
+  flex-wrap: wrap;
+  margin-top: -10px;
+}
+
+.table .header .title {
+  margin-top: 10px;
+}
+
+.table .header .controls {
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 415px) {
   .table {
-    width: 100vw;
+    max-width: 100vw;
   }
 }

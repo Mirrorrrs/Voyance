@@ -37,3 +37,17 @@
   padding-bottom: 0;
   border: 0;
 }
+
+.faqSubtitle {
+  font-weight: 400;
+  font-size: 14px;
+  display: none;
+  letter-spacing: 0.2px;
+  color: #0C1A30;
+}
+
+@media screen and (max-width: 415px) {
+  .faqSubtitle {
+    display: block;
+  }
+}

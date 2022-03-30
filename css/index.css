@@ -11,6 +11,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-left: -10px;
 }
 @media only screen and (max-width: 415px) {
   .contentContainer .ads {
@@ -26,6 +27,7 @@
   -webkit-box-shadow: 0px 2.40964px 3.78658px rgba(0, 0, 0, 0.02);
           box-shadow: 0px 2.40964px 3.78658px rgba(0, 0, 0, 0.02);
   border-radius: 10px;
+  margin-left: 10px;
 }
 
 .contentContainer .ads .ad .content {

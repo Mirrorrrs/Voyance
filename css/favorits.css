@@ -25,12 +25,14 @@
   font-size: 22px;
   margin-top: 30px;
   color: #0C1A30;
+  text-align: center;
 }
 .emptyDisplay p {
   font-weight: 400;
   font-size: 14px;
   margin-top: 20px;
   color: #0C1A30;
+  text-align: center;
 }
 .emptyDisplay .customButton {
   margin-top: 20px;

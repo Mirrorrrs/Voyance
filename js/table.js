@@ -2,7 +2,7 @@ const table = document.querySelector("#table")
 const tableWrapper = document.querySelector(".tableContainer")
 const hiddenHeader = document.querySelector(".hiddenHeader")
 const hiddenHeaderTh =Array.from(hiddenHeader.querySelectorAll("th"))
-const expandBtn = document.querySelector(".expandTableBtn")
+const expandBtn = document.querySelector(".table.block .expandBtn")
 const headerTh = Array.from(table.querySelectorAll("th"))
 const tableHeader = table.querySelector("thead")
 const tableHeaderHeight = tableHeader.getBoundingClientRect().height
@@ -26,18 +26,18 @@ const windowScrollHandler = (ev)=> {
 tableWrapper.addEventListener("scroll", (ev)=>{
     hiddenHeader.scrollLeft = ev.target.scrollLeft
 })
-if (expandBtn){
-    expandBtn.onclick = ()=>{
+function expandTable(){
         if (!tableWrapper.classList.contains("opened")){
             tableWrapper.classList.add("opened")
             expandBtn.classList.add("active")
+            expandBtn.querySelector(".text").textContent = "Voir minus"
             tableWrapper.style.height = table.getBoundingClientRect().height-tableHeaderHeight + "px"
         }else{
             tableWrapper.classList.remove("opened")
             expandBtn.classList.remove("active")
+            expandBtn.querySelector(".text").textContent = "Voir plus"
             tableWrapper.style.height = "440px"
         }
-    }
 }
 
 

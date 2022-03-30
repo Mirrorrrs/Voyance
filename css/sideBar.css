@@ -390,6 +390,8 @@ header .contentContainer {
 
 .sideBar nav ul li.current {
   background: white;
+  box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+
 }
 
 .sideBar nav ul li.current .title {
@@ -698,6 +700,9 @@ header .contentContainer {
   .sideBar nav li {
     border-bottom: 1px solid #EDEDED;
     border-radius: 0;
+    padding: 18px 0;
+  }
+  .sideBar nav li.active {
     padding: 18px 0;
   }
 }
