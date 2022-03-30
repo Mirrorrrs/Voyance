@@ -63,6 +63,5 @@ window.addEventListener("scroll",(ev)=>{
 
     }else{
         $(".scrollUpBtn").hasClass("visible") &&  $(".scrollUpBtn").removeClass("visible")
-
     }
 })

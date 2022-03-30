@@ -1,4 +1,4 @@
-
+const textDescription = $("#textDescription")[0]
 const searchMobileInput = $(".searchModal .inputWrapper input")[0]
 const searchModal = $('.searchModal')[0]
 const commentModal = $('.commentModal')[0]
@@ -7,6 +7,10 @@ const trierDropDown = $("#trierDropDown")[0]
 
 function openSearchModal(){
     searchModal.classList.add("visible")
+}
+
+function toggleTextDescription(){
+    textDescription.classList.toggle("opened")
 }
 
 function openCommentModal(){

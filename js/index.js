@@ -1,4 +1,3 @@
-
 const slidesToShow = window.innerWidth <= 1025 ? window.innerWidth <= 414 ? 2 : 4 : 6
 
 $(".profilesSlider").each((num,el)=>{
