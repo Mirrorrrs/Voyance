@@ -141,7 +141,7 @@
                 <label class="type checked option"><input type="checkbox" name="type">
                     <span class="content">
                                             <p>Mеdium</p>
-                                        <div class="indicator">
+                                        <div class="customCheckbox">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>
@@ -149,7 +149,7 @@
                 <label class="type checked option"><input type="checkbox" name="type">
                     <span class="content">
                                             <p>Tarologue</p>
-                                        <div class="indicator">
+                                        <div class="customCheckbox">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>
@@ -157,7 +157,7 @@
                 <label class="type checked option"><input type="checkbox" name="type">
                     <span class="content">
                                             <p>Numеrologue</p>
-                                        <div class="indicator">
+                                        <div class="customCheckbox">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>
@@ -165,41 +165,41 @@
                 <label class="type checked option"><input type="checkbox" name="type">
                     <span class="content">
                                             <p>Les plus consultés</p>
-                                        <div class="indicator">
+                                        <div class="customCheckbox">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>
                 </label>
             </div>
             <div class="filterOptions triers">
-                <label class="type checked option"><input type="radio" checked name="type">
+                <label class="type checked option"><input type="radio" checked name="typeModal">
                     <span class="content">
                                             <p>Défaut</p>
-                                        <div class="indicator">
+                                        <div class="customRadio">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>
                 </label>
-                <label class="type checked option"><input type="radio" name="type">
+                <label class="type checked option"><input type="radio" name="typeModal">
                     <span class="content">
                                             <p>Les mieux notés</p>
-                                        <div class="indicator">
+                                        <div class="customRadio">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>
                 </label>
-                <label class="type checked option"><input type="radio" name="type">
+                <label class="type checked option"><input type="radio" name="typeModal">
                     <span class="content">
                                             <p>Plus de commentaires</p>
-                                        <div class="indicator">
+                                        <div class="customRadio">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>
                 </label>
-                <label class="type checked option"><input type="radio" name="type">
+                <label class="type checked option"><input type="radio" name="typeModal">
                     <span class="content">
                                             <p>Les plus consultés</p>
-                                        <div class="indicator">
+                                        <div class="customRadio">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>
@@ -231,7 +231,7 @@
                 </div>
                 <div class="searchAndFilters">
                     <div class="selectWrapper headerSearchItem">
-                        <div class="customSelect" onClick="toggleFilterDropdown()">
+                        <div class="customSelect" onClick="toggleFilterDropdown();  blurOnSelect(this, toggleFilterDropdown)">
                             <p>Filter (3)</p>
                         </div>
                             <div id="filterDropDown" class="filterModal modal filter">
@@ -240,7 +240,7 @@
                                     <label class="type checked option"><input type="checkbox" name="type">
                                         <span class="content">
                                             <p>Mеdium</p>
-                                        <div class="indicator">
+                                        <div class="customCheckbox">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>
@@ -248,7 +248,7 @@
                                     <label class="type checked option"><input type="checkbox" name="type">
                                         <span class="content">
                                             <p>Tarologue</p>
-                                        <div class="indicator">
+                                        <div class="customCheckbox">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>
@@ -256,7 +256,7 @@
                                     <label class="type checked option"><input type="checkbox" name="type">
                                         <span class="content">
                                             <p>Numеrologue</p>
-                                        <div class="indicator">
+                                        <div class="customCheckbox">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>
@@ -264,7 +264,7 @@
                                     <label class="type checked option"><input type="checkbox" name="type">
                                         <span class="content">
                                             <p>Les plus consultés</p>
-                                        <div class="indicator">
+                                        <div class="customCheckbox">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>
@@ -279,7 +279,7 @@
 
                     </div>
                     <div class="selectWrapper headerSearchItem">
-                        <div class="customSelect" onclick="toggleTrierDropdown()">
+                        <div class="customSelect" onclick="toggleTrierDropdown(); blurOnSelect(this, toggleTrierDropdown)">
                             <p>Trier (3)</p>
                         </div>
                         <div id="trierDropDown" class="filterModal modal trier">
@@ -288,7 +288,7 @@
                                     <label class="type checked option"><input type="radio" checked name="type">
                                         <span class="content">
                                             <p>Défaut</p>
-                                        <div class="indicator">
+                                        <div class="customRadio">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>
@@ -296,7 +296,7 @@
                                     <label class="type checked option"><input type="radio" name="type">
                                         <span class="content">
                                             <p>Les mieux notés</p>
-                                        <div class="indicator">
+                                        <div class="customRadio">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>
@@ -304,7 +304,7 @@
                                     <label class="type checked option"><input type="radio" name="type">
                                         <span class="content">
                                             <p>Plus de commentaires</p>
-                                        <div class="indicator">
+                                        <div class="customRadio">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>
@@ -312,7 +312,7 @@
                                     <label class="type checked option"><input type="radio" name="type">
                                         <span class="content">
                                             <p>Les plus consultés</p>
-                                        <div class="indicator">
+                                        <div class="customRadio">
                                             <img src="../assets/icons/Accept.svg" alt="">
                                         </div>
                                     </span>

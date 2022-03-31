@@ -125,6 +125,10 @@ header .contentContainer {
   text-decoration: underline;
 }
 
+.navigationDisplay .link span.inactive:hover {
+  text-decoration: none;
+}
+
 .navigationDisplay .page {
   font-weight: bold;
   font-size: 14px;
@@ -142,6 +146,9 @@ header .contentContainer {
 
 .searchBar {
   position: relative;
+}
+
+.poped {
   z-index: 301;
 }
 
@@ -445,6 +452,10 @@ header .contentContainer {
 
 .searchModal.visible {
   right: 0;
+}
+
+.searchModal .inputWrapper img {
+  right: 38px!important;
 }
 
 .sideBar nav {

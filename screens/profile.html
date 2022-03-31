@@ -16,7 +16,7 @@
     <script src="../js/utils.js" defer></script>
     <script src="../js/libs/slick.min.js" defer></script>
     <script src="../js/sideBar.js" defer></script>
-    <script src="../js/index.js" defer></script>
+    <script src="../js/sliders.js" defer></script>
     <script src="../js/buttons.js" defer></script>
 </head>
 <body>
@@ -321,8 +321,8 @@
                     <div class="profileHeader">
                         <div class="navigationContainer">
                             <div class="navigationDisplay">
-                                <p class="link">Voyance  /  Accueil  /  Tous nos voyants </p>
-                                <p class="page">Tous nos voyants </p>
+                                <p class="link">Voyance  /  Accueil  /  Profile</p>
+                                <p class="page">Profile</p>
                             </div>
                             <div class="searchAndFilters">
                                 <div class="searchBar headerSearchItem">
@@ -554,7 +554,7 @@
                             <span>Actif depuis le 31/01/2019</span>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci amet at autem, eligendi esse eum inventore, magnam non obcaecati quisquam ratione sequi tempora? Accusantium aperiam, atque cumque distinctio dolor earum eveniet fugiat ipsa itaque molestias nam nisi placeat porro praesentium quam quia rem sint ut vero voluptas. Aliquam aliquid, consequatur dignissimos dolorem eveniet ex exercitationem ipsa itaque iusto maiores porro quidem, repellat repudiandae sequi ut? Corporis cupiditate dolores facere inventore itaque, minus nemo nihil nobis quam repellat! Adipisci consectetur dolorum impedit pariatur voluptatem! Aperiam atque debitis illo iste iusto labore, nesciunt placeat! Dolores doloribus ex ipsam obcaecati optio qui quia repellat repudiandae saepe sapiente. Ab aliquam at autem eveniet, iure laborum quae quidem repellendus soluta suscipit vel vitae voluptatum.</p>
                         </div>
-                        <div class="expandBtn" onclick="toggleTextDescription()">
+                        <div class="expandBtn" onclick="expandBtnOnclick(this,'Lire la suite', toggleTextDescription)">
                             <button>
                                 <span class="text">Lire la suite</span>
                                 <svg width="7" height="9" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -4522,7 +4522,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="expandBtn" onclick="expandTable()">
+                        <div class="expandBtn" onclick="expandBtnOnclick(this,'Voir plus', expandTable)">
                             <button>
                                 <span class="text">Voir plus</span>
                                 <svg width="7" height="9" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">

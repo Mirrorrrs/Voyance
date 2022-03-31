@@ -29,13 +29,9 @@ tableWrapper.addEventListener("scroll", (ev)=>{
 function expandTable(){
         if (!tableWrapper.classList.contains("opened")){
             tableWrapper.classList.add("opened")
-            expandBtn.classList.add("active")
-            expandBtn.querySelector(".text").textContent = "Voir minus"
             tableWrapper.style.height = table.getBoundingClientRect().height-tableHeaderHeight + "px"
         }else{
             tableWrapper.classList.remove("opened")
-            expandBtn.classList.remove("active")
-            expandBtn.querySelector(".text").textContent = "Voir plus"
             tableWrapper.style.height = "440px"
         }
 }

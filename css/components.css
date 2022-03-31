@@ -11,6 +11,12 @@ body {
   font-family: "DM Sans";
 }
 
+.slick-list {
+  overflow-x: hidden;
+  padding-top:7px;
+  padding-bottom: 7px;
+}
+
 .vl {
   border-left: 1px solid #EDEDED;
   height: 105px;
@@ -587,6 +593,10 @@ li {
   }
 }
 
+.cookieModal .title {
+  display: flex;
+}
+
 .cookieModal .header {
   border-bottom: 1px solid #EDEDED;
 }
@@ -599,6 +609,7 @@ li {
   font-weight: bold;
   font-size: 15px;
   color: #0C1A30;
+;
 }
 
 .cookieModal .sections {
@@ -647,6 +658,10 @@ li {
 .cookieModal .sections section {
   width: calc(100% / 2 - 30px);
   margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
 @media only screen and (max-width: 415px) {
   .cookieModal .sections section {
@@ -669,6 +684,11 @@ li {
   font-weight: 500;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.85);
+  margin-left: 10px
+}
+
+.cookieModal .sections section .type {
+  cursor: pointer;
 }
 
 .cookieModal .sections section p {
@@ -939,7 +959,7 @@ li {
 }
 
 
-.filterModal .filterOptions > .option .indicator {
+.customCheckbox, .customRadio {
   width: 20px;
   height: 20px;
   background: #3A9B7A;
@@ -956,19 +976,17 @@ li {
   transition: 0.1s;
 }
 
-.filterModal .filterOptions.filters > .option .indicator {
+.customCheckbox {
   border-radius: 25%;
   border:1px solid #C4C5C4;
   background: white;
 }
 
-.filterModal .filterOptions.triers > .option .indicator {
+.customRadio {
   border-radius: 50%;
   opacity: 0;
 
 }
-
-
 
 .filterModal .filterOptions .option .content {
   width: 100%;
@@ -976,11 +994,11 @@ li {
   display: flex;
 }
 
-.filterModal .filterOptions .option input:checked + .content .indicator {
+input:checked + .content .customRadio{
   opacity: 1;
 }
 
-.filterModal .filterOptions.filters .option input:checked + .content .indicator {
+input:checked + .content .customCheckbox{
   background: #3A9B7A;
   border:1px solid #3A9B7A;
 }
@@ -999,14 +1017,8 @@ li {
   margin-left: 15px;
 }
 
-.specialistsSlider .cards {
-  margin-left: -15px;
-}
-
 .specialistsSlider .slick-list {
-  overflow-x: hidden;
-  padding-top:7px;
-  padding-bottom: 7px;
+    margin-left: -15px;
 }
 
 .specialistsSlider .slick-arrow {
@@ -1166,7 +1178,7 @@ li {
   background: #FAFAFA;
   padding: 16px 45px 16px 20px;
   border-radius: 12px;
-
+  font-size: 14px;
 }
 
 .inputWrapper.error input, .inputWrapper.error textarea {
@@ -1296,7 +1308,7 @@ li {
 .types .type {
   margin-top: 20px;
 }
-.types .type input {
+.type input {
   display: none;
 }
 .types .type .content {
@@ -1377,6 +1389,7 @@ li {
             flex-direction: column;
     margin-left: 0;
   }
+
 }
 .comments.block .commentsWrapper .comment {
   width: calc(100% / 2 - 20px);
@@ -1518,6 +1531,11 @@ li {
   justify-content: center;
   align-items: center;
 }
+
+ .expandBtn:hover {
+   opacity: 0.85;
+ }
+
  .expandBtn button {
   display: flex;
   align-items: center;

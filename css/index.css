@@ -17,6 +17,7 @@
   .contentContainer .ads {
     padding: 20px 25px 0 25px;
     background: white;
+    margin-left: 0;
   }
 }
 
@@ -24,11 +25,13 @@
   height: 200px;
   padding: 12px;
   background: white;
-  -webkit-box-shadow: 0px 2.40964px 3.78658px rgba(0, 0, 0, 0.02);
-          box-shadow: 0px 2.40964px 3.78658px rgba(0, 0, 0, 0.02);
+  box-shadow: 0px 2.40964px 3.78658px rgba(0, 0, 0, 0.02);
   border-radius: 10px;
   margin-left: 10px;
 }
+
+
+
 
 .contentContainer .ads .ad .content {
   width: 100%;
@@ -162,6 +165,7 @@
   padding: 15px 18px;
   display: -webkit-box;
   display: -ms-flexbox;
+  outline: none;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
