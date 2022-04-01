@@ -1,10 +1,10 @@
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .mainWrapper {
     background: white;
   }
 }
 
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .questions {
     padding: 0 !important;
   }
@@ -16,7 +16,7 @@
   border-radius: 15px;
   padding: 28px 20px;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .faqWrapper {
     padding: 0;
     margin-top: 30px;
@@ -51,7 +51,7 @@
   color: #0C1A30;
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 500px) {
   .faqSubtitle {
     display: block;
   }

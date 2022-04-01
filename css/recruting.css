@@ -1,4 +1,4 @@
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .mainWrapper {
     background: white;
   }
@@ -11,7 +11,7 @@
   border-radius: 15px;
   padding: 28px 20px;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .recrutingForm {
     padding: 0;
     margin-top: 30px;
@@ -32,7 +32,7 @@
   font-size: 14px;
   color: #0C1A30;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .recrutingForm p {
     max-width: 100%;
   }
@@ -44,7 +44,7 @@
   display: flex;
   margin-left: -40px;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .recrutingForm .inputs {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -57,7 +57,7 @@
   width: calc(100% / 2 - 40px);
   margin-left: 40px;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .recrutingForm .inputs section {
     width: 100%;
     margin-left: 0;

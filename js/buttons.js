@@ -6,6 +6,11 @@ const trierDropDown = $("#trierDropDown")[0]
 
 function toggleTextDescription(){
     textDescription.classList.toggle("opened")
+    if (!textDescription.classList.contains("opened")){
+        textDescription.scrollIntoView({
+            behavior:"smooth"
+        })
+    }
 }
 
 function openCommentModal(){
@@ -18,15 +23,26 @@ function closeCommentModal(){
     document.body.classList.remove("wrap")
 }
 
-function toggleFilterDropdown(){
-    trierDropDown.classList.remove("visible")
-    filterDropDown.classList.toggle("visible")
+function toggleFilterDropdown(bool){
+    if (bool){
+        trierDropDown.classList.remove("visible")
+        filterDropDown.classList.add("visible")
+    }else{
+        filterDropDown.classList.remove("visible")
+    }
+
 }
 
-function toggleTrierDropdown(){
-    filterDropDown.classList.remove("visible")
+function toggleTrierDropdown(bool){
+    if (bool){
+        filterDropDown.classList.remove("visible")
 
-    trierDropDown.classList.toggle("visible")
+        trierDropDown.classList.add("visible")
+    }else{
+        trierDropDown.classList.remove("visible")
+
+    }
+
 }
 
 

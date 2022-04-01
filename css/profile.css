@@ -5,7 +5,7 @@
 * Browsers: last 4 version
 */
 
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   body {
     background: white;
   }
@@ -82,7 +82,7 @@
   -ms-flex-align: center;
   align-items: center;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .profileHeader .userInfo {
     padding: 16px;
   }
@@ -125,7 +125,7 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .profileHeader .userInfo .stats {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -162,7 +162,7 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .profileHeader .userInfo .stats .nameButtons {
     width: 100%;
   }
@@ -172,7 +172,7 @@
   display: -ms-flexbox;
   display: flex;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .profileHeader .userInfo .stats .text {
     margin-top: 15px;
     width: 100%;
@@ -190,7 +190,7 @@
   -ms-flex-align: center;
   align-items: center;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .profileHeader .userInfo .stats .text .stat:first-child {
     margin-left: 0;
   }
@@ -328,7 +328,7 @@
   -ms-flex-pack: start;
   justify-content: flex-start;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .descriptions {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -339,7 +339,7 @@
   }
 }
 
-@media only screen and (max-width: 417px) {
+@media only screen and (max-width: 500px) {
   .descriptions {
 
     padding: 0 25px !important;
@@ -353,7 +353,7 @@
   -ms-grid-row-align: start;
   align-self: start;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .descriptions .descWrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -370,7 +370,7 @@
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .descriptions .descWrapper .description:nth-child(1) {
     width: 100%;
   }
@@ -401,7 +401,7 @@
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
 
 
 
@@ -421,7 +421,7 @@
     margin-top: 10px !important;
   }
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .descriptions .descWrapper .description:nth-child(2) {
 
     margin-top: 0;
@@ -505,7 +505,7 @@
   color: #0C1A30;
   margin-top: 15px;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .descriptions .description:nth-child(1) {
     width: 100%;
   }
@@ -516,7 +516,7 @@
   border-radius: 15px;
   background: white;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .descriptions .description {
     margin-left: 0;
   }
@@ -542,7 +542,7 @@
 
 
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .descriptions .description {
     padding: 0;
     padding-bottom: 30px;
@@ -579,7 +579,7 @@
   display: none;
   position: relative;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .mobileHeader {
     display: block;
   }
@@ -651,7 +651,7 @@
   margin-top: 50px;
   position: relative;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .mobileHeader .iconWrapper {
     margin-top: -60px;
   }
@@ -725,7 +725,7 @@
   }
 }
 
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .profileHeaderWrapper {
     display: none;
   }

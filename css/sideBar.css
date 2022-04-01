@@ -57,7 +57,7 @@ header .backButton, .sideBarHeader .backButton, .searchBarHeader .backButton {
     z-index: 10;
   }
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   header, .sideBarHeader, .searchBarHeader {
     background: white;
 
@@ -119,6 +119,7 @@ header .contentContainer {
 
 .navigationDisplay .link span.inactive {
   color: #A0AEC0;
+  cursor: default;
 }
 
 .navigationDisplay .link span:hover {
@@ -170,7 +171,19 @@ header .contentContainer {
   background: white;
   width:200px;
   border: 0.5px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
+}
+
+.searchAndFilters .selectWrapper .customSelect svg {
+  transform: rotate(90deg);
+  transition: .2s;
+}
+
+.searchAndFilters .selectWrapper .customSelect.active svg {
+  transform: rotate(-90deg);
 }
 
 .searchAndFilters .selectWrapper .customSelect p {

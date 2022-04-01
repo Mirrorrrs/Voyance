@@ -1,14 +1,25 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @import "../fonts/DMSans/stylesheet.css";
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   background: #F8F9FA;
   font-family: "DM Sans";
+}
+
+.slick-slide {
+  outline: none;
 }
 
 .slick-list {
@@ -46,7 +57,7 @@ button {
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
-       appearance: none;
+  appearance: none;
 }
 
 li {
@@ -64,7 +75,7 @@ li {
     padding-right: 32px !important;
   }
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .paddingContainer {
     padding-left: 25px !important;
     padding-right: 25px !important;
@@ -81,11 +92,11 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .block .header .controls {
@@ -93,8 +104,8 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .block .header .controls span {
@@ -116,11 +127,11 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .contentWrapper {
@@ -132,15 +143,15 @@ li {
 .contentWrapper .contentContainer {
   margin-top: 20px;
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   min-height: calc(100vh - 100px);
   min-width: 0;
 }
@@ -151,7 +162,7 @@ li {
 
   }
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .contentWrapper .contentContainer {
     margin-top: 0;
   }
@@ -160,8 +171,8 @@ li {
 .contentWrapper .contentContainer .mainWrapper {
   width: 100%;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .star svg {
@@ -182,15 +193,18 @@ li {
   font-weight: 500;
   font-size: 14px;
   -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 .customButton:hover {
   background: #5687E3;
+  -webkit-box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
   box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
 }
 
 .customButton.white:hover {
   background: #F0F0F0;
+  -webkit-box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
   box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
 }
 
@@ -229,9 +243,12 @@ li {
   width: calc(100% / 6 - 15px);
   min-height: 258px;
   background: white;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   margin-left: 15px;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
   outline: none;
   cursor: pointer;
@@ -255,6 +272,7 @@ li {
 }
 
 .specialistCard:hover {
+  -webkit-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
 }
 @media only screen and (max-width: 769px) {
@@ -262,7 +280,7 @@ li {
     width: calc(100% / 4 - 15px);
   }
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .specialistCard {
     width: calc(100% / 2 - 15px);
   }
@@ -271,15 +289,19 @@ li {
 .specialistCard .buttons button {
   margin-left: 10px;
   background: #3669C9;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
 }
 .specialistCard .buttons button:hover {
   background: #5687E3;
+  -webkit-box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
   box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
 }
 
 .specialistCard.green .buttons button:hover {
   background: #50B592;
+  -webkit-box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
   box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16);
 }
 
@@ -298,11 +320,11 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 0;
 }
 
@@ -336,6 +358,7 @@ li {
   fill: white;
   stroke: black;
   -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -349,8 +372,8 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 10px;
 }
 
@@ -365,7 +388,7 @@ li {
   height: 100%;
   border-radius: 50%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .specialistCard .imageWrapper .profile {
@@ -411,8 +434,8 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 10px;
   margin-left: -10px;
 }
@@ -422,8 +445,8 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 10px;
 }
 
@@ -432,8 +455,8 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .specialistCard .rating .stars img, .specialistCard .rating .calls img {
   width: 12px;
@@ -472,6 +495,7 @@ li {
   opacity: 0;
   z-index: -1;
   -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -481,8 +505,8 @@ li {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -492,6 +516,7 @@ li {
   overflow: hidden;
   margin-top: 0;
   -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -501,18 +526,18 @@ li {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 0;
 }
 @media only screen and (max-width: 769px) {
   .dropdownMenu .hiddenContent .menuWrapper {
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     margin-left: 12px;
   }
 }
@@ -552,7 +577,8 @@ li {
 
 .dropdownMenu.active .content .arrow {
   -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .modal {
@@ -589,11 +615,14 @@ li {
     right: auto;
     bottom: auto;
     -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
 
 .cookieModal .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -618,22 +647,22 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-left: -30px;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .cookieModal .sections {
     width: 100%;
     margin-left: 0;
     margin-top: -35px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 .cookieModal .sections .buttons {
@@ -647,7 +676,7 @@ li {
   text-align: center;
   margin-left: 15px;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .cookieModal .sections .buttons {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -658,12 +687,19 @@ li {
 .cookieModal .sections section {
   width: calc(100% / 2 - 30px);
   margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .cookieModal .sections section {
     margin-left: 0;
     width: 100%;
@@ -701,7 +737,7 @@ li {
 .cookieModal .sections section .customButton {
   margin-top: 30px;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .cookieModal .sections section .customButton {
     display: none;
   }
@@ -713,7 +749,7 @@ li {
   border: 1px solid black;
 }
 
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .questions {
     padding: 0 25px;
   }
@@ -724,17 +760,17 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .questions .question .content {
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
   }
 }
 
@@ -743,18 +779,18 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .questions .question .content .info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 }
 
@@ -770,6 +806,7 @@ li {
   margin-top: 20px;
   border-bottom: 1px solid #EDEDED;
   -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 .questions .question:hover {
@@ -784,24 +821,27 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
 .questions .question button svg {
   fill: #06070C;
   -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
 .questions .dropdownMenu.active button {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
   background: #000;
 }
 
@@ -816,7 +856,7 @@ li {
 .questions .question .hiddenContent .menuWrapper p {
   font-size: 12px;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .questions .question .hiddenContent .menuWrapper {
     padding: 0;
   }
@@ -827,7 +867,7 @@ li {
   font-size: 14px;
   margin-left: 16px;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .questions .question .content .text {
     margin-left: 0;
     margin-top: 20px;
@@ -858,6 +898,7 @@ li {
   max-width: 325px;
   width: 100%;
   -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 @media only screen and (max-width: 769px) {
@@ -865,15 +906,17 @@ li {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .filterModal {
     bottom: 85px;
     top: auto;
     -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
   }
 }
 
@@ -883,7 +926,8 @@ li {
 
 .filterModal .block .controls {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
   width: 13px;
   height: 13px;
 }
@@ -910,6 +954,7 @@ li {
   height: 2px;
   background: #3669C9;
   -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -941,11 +986,11 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .filterModal .filterOptions > .option:last-child {
@@ -967,12 +1012,13 @@ li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
   transition: 0.1s;
 }
 
@@ -990,7 +1036,11 @@ li {
 
 .filterModal .filterOptions .option .content {
   width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1018,7 +1068,7 @@ input:checked + .content .customCheckbox{
 }
 
 .specialistsSlider .slick-list {
-    margin-left: -15px;
+  margin-left: -15px;
 }
 
 .specialistsSlider .slick-arrow {
@@ -1030,9 +1080,10 @@ input:checked + .content .customCheckbox{
   font-size: 0;
   left: 0;
   -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .specialistsSlider .slick-arrow {
     display: none;
   }
@@ -1040,14 +1091,14 @@ input:checked + .content .customCheckbox{
 
 .specialistsSlider .slick-prev {
   -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  -ms-flex-order: 2;
+  order: 2;
 }
 
 .specialistsSlider .slick-next {
   -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+  -ms-flex-order: 3;
+  order: 3;
 }
 
 .specialistsSlider .slick-prev:before {
@@ -1070,21 +1121,28 @@ input:checked + .content .customCheckbox{
 
 .commentModal {
   padding: 60px 50px 55px 50px;
-  max-width: 425px;
+  max-width: 500px;
   width: 100%;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .commentModal .mark {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .commentModal .markStars {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 7px;
 
@@ -1096,17 +1154,17 @@ input:checked + .content .customCheckbox{
   margin-left: 12px;
   cursor: pointer;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .commentModal {
     width: 100%;
     height: 100vh;
     padding: 0;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .commentModal.visible {
     display: -webkit-box;
@@ -1122,9 +1180,10 @@ input:checked + .content .customCheckbox{
 }
 .commentModal .controls img {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .commentModal .controls {
     left: 25px;
   }
@@ -1145,8 +1204,8 @@ input:checked + .content .customCheckbox{
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-bottom: 20px;
   position: relative;
 }
@@ -1154,6 +1213,8 @@ input:checked + .content .customCheckbox{
 .inputWrapper img {
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   right: 20px;
   width: 20px;
@@ -1182,29 +1243,35 @@ input:checked + .content .customCheckbox{
 }
 
 .inputWrapper.error input, .inputWrapper.error textarea {
- border: 1px solid #FE3A30;
+  border: 1px solid #FE3A30;
 }
 
 .inputWrapper.error .errorMessage {display: block}
 
 .inputWrapper input::-webkit-input-placeholder, .inputWrapper textarea::-webkit-input-placeholder {
   color: #C4C5C4;
+  -webkit-transition: .2s;
   transition: .2s;
 }
 .inputWrapper input::-moz-placeholder, .inputWrapper textarea::-moz-placeholder {
   color: #C4C5C4;
+  -moz-transition: .2s;
   transition: .2s;
 }
 .inputWrapper input:-ms-input-placeholder, .inputWrapper textarea:-ms-input-placeholder {
   color: #C4C5C4;
+  -ms-transition: .2s;
   transition: .2s;
 }
 .inputWrapper input::-ms-input-placeholder, .inputWrapper textarea::-ms-input-placeholder {
   color: #C4C5C4;
+  -ms-transition: .2s;
   transition: .2s;
 }
 .inputWrapper input::placeholder, .inputWrapper textarea::placeholder {
   color: #C4C5C4;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
 }
 
@@ -1215,6 +1282,9 @@ input:checked + .content .customCheckbox{
   color: #0C1A30;
 }
 .inputWrapper input:hover::-ms-input-placeholder, .inputWrapper textarea:hover::-ms-input-placeholder {
+  color: #0C1A30;
+}
+.inputWrapper input:hover::-webkit-input-placeholder, .inputWrapper textarea:hover::-webkit-input-placeholder {
   color: #0C1A30;
 }
 .inputWrapper input:hover::placeholder, .inputWrapper textarea:hover::placeholder {
@@ -1229,11 +1299,11 @@ input:checked + .content .customCheckbox{
 .emptyWindow {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emptyWindow p {
@@ -1262,7 +1332,8 @@ input:checked + .content .customCheckbox{
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .successModal .emptyWindow {
   display: -webkit-box;
@@ -1270,11 +1341,11 @@ input:checked + .content .customCheckbox{
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .successModal .emptyWindow .icon {
   width: 50px;
@@ -1284,7 +1355,7 @@ input:checked + .content .customCheckbox{
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .successModal .customButton {
   margin-top: 45px;
@@ -1319,6 +1390,7 @@ input:checked + .content .customCheckbox{
   font-weight: 500;
   font-size: 14px;
   -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
   margin-left: 10px;
   display: block;
@@ -1341,7 +1413,7 @@ input:checked + .content .customCheckbox{
   padding: 28px 20px;
   border-radius: 15px;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .comments.block {
     padding: 0;
   }
@@ -1353,12 +1425,12 @@ input:checked + .content .customCheckbox{
   display: flex;
   margin-left: -20px;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .comments.block .buttons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     margin-top: 20px;
     margin-left: 0;
   }
@@ -1366,7 +1438,7 @@ input:checked + .content .customCheckbox{
 .comments.block .buttons button {
   margin-left: 20px;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .comments.block .buttons button {
     margin-top: 12px;
     margin-left: 0;
@@ -1377,7 +1449,7 @@ input:checked + .content .customCheckbox{
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-left: -20px;
   margin-top: -20px;
 }
@@ -1385,8 +1457,8 @@ input:checked + .content .customCheckbox{
   .comments.block .commentsWrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     margin-left: 0;
   }
 
@@ -1409,7 +1481,7 @@ input:checked + .content .customCheckbox{
     margin-left: 0;
   }
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .comments.block .commentsWrapper .comment {
     padding: 0;
     width: 100%;
@@ -1436,8 +1508,8 @@ input:checked + .content .customCheckbox{
   display: flex;
   margin-bottom: 0;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .comments.block .commentsWrapper .comment .content .header h6 {
   font-weight: 500;
@@ -1456,7 +1528,7 @@ input:checked + .content .customCheckbox{
 }
 .comments.block .commentsWrapper .comment .icon {
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   border: 1px solid #A0AEC0;
   width: 40px;
   height: 40px;
@@ -1466,7 +1538,7 @@ input:checked + .content .customCheckbox{
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .bottomNavigation {
@@ -1483,8 +1555,8 @@ input:checked + .content .customCheckbox{
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 0 10px;
 }
 .bottomNavigation ul li {
@@ -1493,11 +1565,11 @@ input:checked + .content .customCheckbox{
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .bottomNavigation ul li p {
   font-weight: 500;
@@ -1521,7 +1593,7 @@ input:checked + .content .customCheckbox{
   }
 }
 
- .expandBtn {
+.expandBtn {
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1529,31 +1601,43 @@ input:checked + .content .customCheckbox{
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
- .expandBtn:hover {
-   opacity: 0.85;
- }
+.expandBtn:hover {
+  opacity: 0.85;
+}
 
- .expandBtn button {
+.expandBtn button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
- .expandBtn button span {
-   color: #3669C9 !important;
-   font-weight: 500;
-   font-size: 14px;
- }
+.expandBtn button span {
+  color: #3669C9 !important;
+  font-weight: 500;
+  font-size: 14px;
+}
 
- .expandBtn button svg {
+.expandBtn button svg {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   margin-left: 7px;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
 }
 
- .expandBtn.active button svg {
+.expandBtn.active button svg {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   margin-left: 7px;
 }
@@ -1562,12 +1646,16 @@ input:checked + .content .customCheckbox{
   bottom: 80px;
   width: 100%;
   display: none;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   z-index: 200;
   padding: 0 140px;
 }
 
 .scrollUpBtn.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 

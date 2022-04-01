@@ -1,7 +1,7 @@
 .specialistsSlider {
   margin-top: 30px !important;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .specialistsSlider {
     margin-top: 30px !important;
   }
@@ -33,7 +33,7 @@
   display: flex;
   margin-left: -25px;
 }
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 500px) {
   .infoIcons {
     padding: 30px 0;
     margin-left: 0;

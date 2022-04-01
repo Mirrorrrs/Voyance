@@ -33,6 +33,9 @@ function expandTable(){
         }else{
             tableWrapper.classList.remove("opened")
             tableWrapper.style.height = "440px"
+            tableHeader.scrollIntoView({
+                behavior:"smooth"
+            })
         }
 }
 

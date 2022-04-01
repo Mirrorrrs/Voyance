@@ -18,19 +18,38 @@ menuButton.each((num, el) => {
 })
 
 function blurOnSelect(el, ...args){
-    el.parentNode.classList.add("poped")
-    viewWrapper.classList.add("blured")
-    window.onclick = (ev)=>{
-        if(ev.path.indexOf(el.parentNode)===-1){
-            el.parentNode.classList.remove("poped")
-            viewWrapper.classList.remove("blured")
-            searchResults.classList.remove("visible")
-            if (args[0]){
-                args[0]()
-            }
-            enableScroll()
+
+    const removeFunc = ()=>{
+        el.parentNode.classList.remove("poped")
+        el.classList.remove("active")
+        viewWrapper.classList.remove("blured")
+        searchResults.classList.remove("visible")
+        if (args[0]){
+            args[0]()
+        }
+        window.removeEventListener("click",handler)
+
+        enableScroll()
+    }
+
+    const handler = (ev)=>{
+        if(!el.parentNode.contains(ev.target)){
+            removeFunc()
         }
     }
+
+    if (!el.parentNode.classList.contains("poped")){
+        el.parentNode.classList.add("poped")
+        el.classList.add("active")
+        viewWrapper.classList.add("blured")
+
+        window.addEventListener("click",handler)
+    }else{
+        window.removeEventListener("click",handler)
+        removeFunc()
+        enableScroll()
+    }
+
     disableScroll()
 }
 
