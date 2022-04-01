@@ -92,7 +92,13 @@
 
 .filterToggler {
   position: sticky;
-  bottom: 100px;
+  bottom: 20px;
   z-index: 100;
   margin-top: 40px;
+}
+
+@media only screen and (max-width: 769px) {
+  .filterToggler {
+    bottom: 100px;
+  }
 }

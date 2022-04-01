@@ -275,7 +275,7 @@ li {
   -webkit-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .specialistCard {
     width: calc(100% / 4 - 15px);
   }
@@ -364,7 +364,7 @@ li {
 
 .specialistCard .header .like svg:hover {
   fill: #FE3A30;
-  stroke: none;
+  stroke: white;
 }
 
 .specialistCard .picture {
@@ -888,7 +888,7 @@ li {
   display: none;
   margin-top: 30px;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .filterToggler {
     display: block;
   }
@@ -901,7 +901,7 @@ li {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .filterModal {
     top: 50%;
     left: 50%;
@@ -1651,6 +1651,13 @@ input:checked + .content .customCheckbox{
   justify-content: flex-end;
   z-index: 200;
   padding: 0 140px;
+}
+
+@media screen and (max-width: 1024px){
+  .scrollUpBtn {
+    padding: 0 20px;
+
+  }
 }
 
 .scrollUpBtn.visible {

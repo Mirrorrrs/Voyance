@@ -254,7 +254,7 @@
 
 .profileHeader .userInfo .stats .buttons button.likeButton.active svg{
   fill: #FE3A30;
-  stroke:none;
+  stroke:white;
 }
 
 .profileHeader .userInfo .stats .buttons button.playButton img:nth-child(2){

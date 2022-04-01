@@ -68,7 +68,7 @@ header .logo {
   max-width: 220px;
   width: 100%;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   header .logo {
     width: auto;
   }
@@ -97,7 +97,7 @@ header .contentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  flex: 1 1 auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -143,6 +143,16 @@ header .contentContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .searchAndFilters .selectWrapper {
+    display: none;
+  }
+
+  header .contentContainer {
+    margin-left: 80px;
+  }
 }
 
 .searchBar {

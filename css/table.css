@@ -8,7 +8,7 @@
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .tWrap .tableContainer {
     overflow-x: scroll;
   }
@@ -17,7 +17,7 @@
 .hiddenHeader {
   display: none;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .hiddenHeader {
     overflow-x: scroll;
   }
@@ -125,7 +125,7 @@ table td .sign {
   margin-left: 2px;
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   table th, main table td {
     min-width: 60px;
   }
