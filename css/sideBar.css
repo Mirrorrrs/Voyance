@@ -5,8 +5,8 @@ header, .sideBarHeader, .searchBarHeader {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 header .burgerMenu, header .searchButton, .sideBarHeader .burgerMenu, .sideBarHeader .searchButton, .searchBarHeader .burgerMenu, .searchBarHeader .searchButton {
   display: none;
@@ -31,7 +31,7 @@ header .searchButton, .sideBarHeader .searchButton, .searchBarHeader .searchButt
 }
 header .backButton, .sideBarHeader .backButton, .searchBarHeader .backButton {
   -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
   display: none;
 }
 @media only screen and (max-width: 769px) {
@@ -48,8 +48,8 @@ header .backButton, .sideBarHeader .backButton, .searchBarHeader .backButton {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     background: white;
     padding-bottom: 22px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
@@ -67,11 +67,6 @@ header .backButton, .sideBarHeader .backButton, .searchBarHeader .backButton {
 header .logo {
   max-width: 220px;
   width: 100%;
-}
-@media only screen and (max-width: 1024px) {
-  header .logo {
-    width: auto;
-  }
 }
 
 .textLogo {
@@ -99,8 +94,8 @@ header .contentContainer {
   display: flex;
   flex: 1 1 auto;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 769px) {
   header .contentContainer {
@@ -141,8 +136,8 @@ header .contentContainer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -150,9 +145,6 @@ header .contentContainer {
     display: none;
   }
 
-  header .contentContainer {
-    margin-left: 80px;
-  }
 }
 
 .searchBar {
@@ -265,7 +257,7 @@ header .contentContainer {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   left: 12px;
   z-index: 301;
 }
@@ -298,11 +290,11 @@ header .contentContainer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-bottom: 20px;
   border-bottom: 1px solid #EDEDED;
   margin-top: 20px;
@@ -323,8 +315,8 @@ header .contentContainer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .searchBar .searchResults .result .content .text {
@@ -335,11 +327,11 @@ header .contentContainer {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .searchBar .searchResults .result .content .text p {
@@ -365,7 +357,7 @@ header .contentContainer {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   display: block;
   border-radius: 50%;
 }
@@ -375,8 +367,8 @@ header .contentContainer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .searchBar .searchResults .result .raiting span {
@@ -400,11 +392,11 @@ header .contentContainer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .searchBar .searchResults.empty .emptyWindow {
@@ -415,6 +407,7 @@ header .contentContainer {
 
 .sideBar {
   max-width: 220px;
+  min-width: 220px;
   width: 100%;
 }
 
@@ -507,8 +500,8 @@ header .contentContainer {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   height: 100vh;
   overflow-y: scroll;
   position: fixed;
@@ -530,8 +523,8 @@ header .contentContainer {
 }
 .searchModal .top {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 .searchModal .top .recents {
   margin-top: 10px;
@@ -546,24 +539,24 @@ header .contentContainer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 25px;
 }
 .searchModal .top .recents .recent > img {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .searchModal .top .recents .recent .data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .searchModal .top .recents .recent .data p {
   font-weight: 400;
@@ -581,11 +574,11 @@ header .contentContainer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .searchModal .top .results .result .imageWrapper {
   width: 45px;
@@ -597,8 +590,8 @@ header .contentContainer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .searchModal .top .results .result .data .text p {
   font-weight: 500;
@@ -637,7 +630,7 @@ header .contentContainer {
 }
 .searchModal .searchBarHeader .burgerMenu {
   -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .sideBar nav ul {
@@ -658,11 +651,11 @@ header .contentContainer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .sideBar nav li .content .name {
@@ -670,20 +663,20 @@ header .contentContainer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .sideBar nav li .content .arrow img {
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .sideBar nav li .content .arrow {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .sideBar nav .icon {
@@ -693,17 +686,17 @@ header .contentContainer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background: white;
   border-radius: 12px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.02);
-          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.02);
 }
 @media only screen and (max-width: 769px) {
   .sideBar nav .icon {
