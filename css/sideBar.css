@@ -80,6 +80,10 @@ header .logo {
   .textLogo {
     display: block;
   }
+  header .logo {
+    width: auto;
+  }
+
 }
 
 @media only screen and (max-width: 769px) {
