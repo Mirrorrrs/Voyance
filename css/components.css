@@ -352,6 +352,7 @@ li {
 .specialistCard .header .like {
   width: 16px;
   height: 16px;
+  cursor: pointer;
 }
 
 .specialistCard .header .like svg {
@@ -362,9 +363,14 @@ li {
   transition: 0.2s;
 }
 
-.specialistCard .header .like svg:hover {
+
+.specialistCard .header .like.liked svg {
   fill: #FE3A30;
   stroke: white;
+}
+
+.specialistCard .header .like.liked svg path:nth-child(1) {
+  stroke: #FE3A30;
 }
 
 .specialistCard .picture {
@@ -403,6 +409,8 @@ li {
 
 .imageWrapper .country {
   position: absolute;
+  width: 32px;
+  height: 32px;
   bottom: 0;
   right: 0;
 }
@@ -438,6 +446,18 @@ li {
   justify-content: center;
   margin-top: 10px;
   margin-left: -10px;
+}
+
+.specialistCard .buttons button.playButton img:nth-child(2){
+  display: none;
+}
+
+.specialistCard .buttons button.playButton.pause img:nth-child(1){
+  display: none;
+}
+
+.specialistCard .buttons button.playButton.pause img:nth-child(2){
+  display: block;
 }
 
 .specialistCard .rating {
@@ -1071,6 +1091,10 @@ input:checked + .content .customCheckbox{
   margin-left: -15px;
 }
 
+.specialistsSlider .slick-track {
+  margin-left: 0!important;
+}
+
 .specialistsSlider .slick-arrow {
   display: block;
   position: static;
@@ -1650,7 +1674,7 @@ input:checked + .content .customCheckbox{
   -ms-flex-pack: end;
   justify-content: flex-end;
   z-index: 200;
-  padding: 0 140px;
+  padding: 0 40px;
 }
 
 @media screen and (max-width: 1024px){
